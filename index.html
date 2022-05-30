@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/checkout.css">
-  <link rel="icon" href="./res/favicon-32x32.png">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="/res/favicon-32x32.png">
   <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
+
 </head>  
 <body>
   <header>
@@ -94,150 +95,117 @@
     </nav>
   </header>
   <main>
-    <section class="billing-info">
-      <div class="billing-error">
-        <span>Please fill out all the <strong>required fields </strong> below</span>
+    <div class="product-promotion">
+      <div class="product-promotion__gallery">
+        <div class="gallery__img slider-img-1 selected-slider-img" aria-label="promotion image #1"></div>
+        <div class="gallery__img slider-img-2" aria-label="promotion image #2"></div>
+        <div class="gallery__img slider-img-3" aria-label="promotion image #3"></div>
       </div>
-      <h2>Billing Details:</h2>
-      <form class="user-information" action="" method="POST">
-        <div class="user-name">
-          <div class="user-name__first">
-            <label for="first-name">First Name *</label>
-            <input type="text" id="first-name" name="first-name" required="required">
-          </div>
-          <div class="user-name__last">
-            <label for="last-name">Last Name *</label>
-            <input type="text" id="last-name" name="last-name" required="required">
-          </div>
+      <ul class="product-promotion__control" aria-label="Promotion Selection">
+        <li>
+          <button class="control__slide-btn" type="button" aria-controls="slide1" aria-label="Go to slide 1" data-selected="true" data-slide-order="1"></button>
+        </li>
+        <li>
+          <button class="control__slide-btn" type="button" aria-controls="slide2" aria-label="Go to slide 2" data-selected="false" data-slide-order="2"></button>
+        </li>
+        <li>
+          <button class="control__slide-btn" type="button" aria-controls="slide3" aria-label="Go to slide 3" data-selected="false" data-slide-order="3"></button>
+        </li>
+      </ul>
+    </div>
+    <section class="product-category">
+      <h2>CATEGORY</h2>
+      <div class="product-category__options">
+        <div class="option__board-game">
+          <img src="/res/board-game-category.png" alt="board game category">
+          <p>Board game</p>
         </div>
-        <div class="user-company">
-          <label for="company-name">Company Name</label>
-          <input type="text" id="company-name" name="company-name">
+        <div class="option__card-game">
+          <img src="/res/card-game-category.png" alt="card game category">
+          <p>Card game</p>
         </div>
-        <div class="user-phone">
-          <label for="phone-number">Phone</label>
-          <label for="phone-region"></label>
-          <div class="user-phone__detail">
-            <fieldset class="phone-region__fieldset">
-              <select name="phone-region" id="phone-region" class="phone-region-select">
-                <option value="" disabled selected>Choose</option>
-                <option value="aus">+61</option>
-              </select>  
-            </fieldset>
-            <input type="text" id="phone-number" class="phone-number-input" name="phone-number">
-          </div>
+        <div class="option__puzzle">
+          <img src="/res/puzzle-category.png" alt="puzzle category">
+          <p>Puzzle</p>
         </div>
-        <div class="user-email">
-          <label for="email">Email *</label>
-          <input type="text" id="email" name="email" required="required">
+        <div class="option__role-playing">
+          <img src="/res/rpg-category.png" alt="rpg category">
+          <p>RPG Game</p>
         </div>
-        <div class="user-country-state">  
-          <div class="user-country__detail">
-            <label for="country">Country *</label>
-            <select name="country" id="country" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="aus">Australia</option>
-            </select>
-          </div>
-          <div class="user-state__detail">
-            <label for="state">State *</label>
-            <select name="state" id="state" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="vic">VIC</option>  
-            </select>
-          </div>
+        <div class="option__editor-choice">
+          <img src="/res/editor-choice-category.png" alt="editor's choice category">
+          <p>Editor's Choice</p>
         </div>
-        <div class="user-city-surburb">
-          <div class="user-city__detail">
-            <label for="city">City/Town *</label>
-            <select name="city" id="city" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="melb">Melbourne</option>
-            </select>
-          </div>
-          <div class="user-surburb__detail">
-            <label for="surburb">Surburb *</label>
-            <select name="surburb" id="surburb" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="carlton">Carlton</option>
-            </select>
-          </div>
-        </div>
-        <div class="user-street">
-          <div class="user-street__name">
-            <label for="street-name">Street Name *</label>
-            <input type="text" id="street-name" required="required">
-          </div>
-          <div class="user-street__num">
-            <label for="street-num">Street Number *</label>
-            <input type="text" id="street-num" required="required">
-          </div>
-        </div>
-        <div class="user-department">
-          <label for="department">Department Name, Department Floor</label>
-          <input type="text" id="department">
-        </div>
-      </form>
     </section>
-    <section class="shipping-info">
-      <form action="" class="shipping-form">
-        <fieldset class="shipping-fieldset">
-          <legend>Shipping Details:</legend>
-          <div class="shipping-info__free shipping-delivery__selected">
-            <input type="radio" id="free-shipping" name="shipping-method" checked>
-            <div class="shipping-description">
-              <label for="free-shipping">Free Shipping</label>
-              <p><strong>Delivered:</strong>
-                <br>
-                Mon 30th May - Tue 31st May (Tracked 48)</p>
-            </div>
-          </div>
-          <div class="shipping-info__express">
-            <input type="radio" id="express-shipping" name="shipping-method">
-            <div class="shipping-description">
-              <label for="express-shipping">Express + $80.99</label>
-              <p>
-                <strong>Delivered:</strong>
-                <br>
-                Get it Tomorrow, Sat 28th May! (Tracked 24)
-              </p>
-            </div>
-          </div>
-        </fieldset>
-        <div class="shipping-alternative">
-          <input type="checkbox" id="different-shipping" name="different-shipping">
-          <label for="different-shipping">Shipping to another address</label>
+    <section class="product-trend">
+      <h2>TRENDING PRODUCTS</h2>
+      <div class="product-trend__options">
+        <div class="option__item">
+          <img src="/res/Screen Shot 2022-05-27 at 4.29.25 PM.png" alt="Cartographers">
+          <p>CARTOGRAPHERS</p>
+          <p class="item__price-tag">$ 8.29</p>
+          <button type="button">ADD TO CART</button>
         </div>
-      </form>
-    </section>
-    <section class="order-review">
-      <h2>Order Overview:</h2>
-      <div class="order-review__detail">
-        <div class="detail__title">
-          <h3>Product</h3>
-          <h3>Price</h3>
+        <div class="option__item">
+          <img src="/res/Screen Shot 2022-05-24 at 4.31.40 AM.png" alt="Before the earth">
+          <p>CARNEGIE</p>
+          <p class="item__price-tag">$ 45.29</p>
+          <button type="button">ADD TO CART</button>
         </div>
-        <div class="detail__info">
-          <span>Cartographers</span>
-          <span>$8.29</span>
-        </div>
-        <div class="detail__info">
-          <span>Carnegie</span>
-          <span>$45.29</span>
+        <div class="option__item">
+          <img src="/res/Screen Shot 2022-05-24 at 4.38.17 AM.png" alt="Filler">
+          <p>FILLER</p>
+          <p class="item__price-tag">$ 11.79</p>
+          <button type="button">ADD TO CART</button>
         </div>
       </div>
-      <div class="order-review__wrapup">
-        <div class="wrapup__coupon">
-          <label for="coupon">Coupon</label>
-          <input class="coupon-input" type="text" id="coupon" name="couple">
+      <a href="product-listing.html" role="button" class="view-all-btn">VIEW ALL</a>
+    </section>
+    <section class="product-best-seller">
+      <h2>BEST SELLERS</h2>
+      <div class="product-best-seller__options">
+        <div class="option__item">
+          <img src="/res/Screen Shot 2022-05-24 at 6.00.57 PM.png" alt="Pandameic: The Lab">
+          <p>PANDAMEIC: THE LAB</p>
+          <p class="item__price-tag">$ 30.99</p>
+          <button type="button">ADD TO CART</button>
         </div>
-        <div class="wrapup__total-price">
-          <h3>TOTAL</h3>
-          <span>$53.58</span>
+        <div class="option__item">
+          <img src="/res/Screen Shot 2022-05-24 at 6.09.10 PM.png" alt="Explore & Draw">
+          <p>EXPLORE & DRAW</p>
+          <p class="item__price-tag">$ 29.99</p>
+          <button type="button">ADD TO CART</button>
+        </div>
+        <div class="option__item">
+          <img src="/res/Screen Shot 2022-05-24 at 4.36.54 PM.png" alt="Pendragon">
+          <p>PENDRAGON</p>
+          <p class="item__price-tag">$ 49.99</p>
+          <button type="button">ADD TO CART</button>
         </div>
       </div>
-    </section>
-    <a href="payment.html" class="proceed-payment-btn" role="button">PAYMENT</a>
+      <a href="product-listing.html" role="button" class="view-all-btn">VIEW ALL</a>
+    </section>  
+    <aside class="customer-review">
+      <div class="customer-review__preview">
+        <div class="preview__content">
+          <h2>WHAT OUT CLIENTS SAY ABOUT US</h2>
+          <p><quote>"Spelshop are amazing! They offer friendly, efficient service, a very wide range of games and almost always the most competitive prices. They also deal with any issues quickly and fairly. I highly recommend that Spelshop are your first stop for all of your board game needs."</quote></p>
+          <p><quote>"These guys have the best selection at the best prices. Items always arrive quickly and with no damage. No need to shop around! Would totally recommend :)"</quote></p>
+        </div> 
+        <div class="preview__link">
+          <a href="">READ ALL REVIEWS</a>
+        </div>
+      </div>
+      <div class="customer-review__input">
+        <div class="input__content">
+          <h3>Leave a comment !</h3>
+          <textarea class="content__textarea" placeholder="Comment ..." rows="4" cols="5"></textarea>
+        </div>
+        <div class="input__btn">
+          <button type="button">Submit</button>
+        </div> 
+      </div>
+    </aside>
   </main>
   <footer>
     <div class="subscription">
@@ -295,10 +263,9 @@
       </div>
     </div>
   </footer>
-  <!-- scripts -->
-  <script src="./javascript/header.js" defer></script>
-  <script src="./javascript/footer.js" defer></script>
-  <script src="./javascript/product-preview.js" defer></script>
-  <script src="./javascript/checkout-validation.js"></script>
+  <!-- script -->
+  <script src="/javascript/header.js" defer></script>
+  <script src="/javascript/footer.js" defer></script>
+  <script src="/javascript/promotion-slide.js" defer></script>
 </body>
 </html>
