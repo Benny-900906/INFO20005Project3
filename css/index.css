@@ -1,0 +1,496 @@
+@import url(root.css);
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 2rem; */
+  font-family: var(--content-font-family);
+}
+
+main {
+  /* outline: 2px solid black; */
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.product-promotion {
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* overflow-x: auto; */
+  width: 100%;
+  position: relative;
+}
+
+.product-promotion__gallery::-webkit-scrollbar {
+  display: none;
+  /* width: 12px; */
+}
+
+.product-promotion__gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.gallery__img {
+  flex: none;
+  aspect-ratio: 3/1;
+  /* aspect-ratio: 16/9; */
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  width: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.slider-img-1 {
+  background-image: url("https://www.board-game.co.uk/wp-content/uploads/2022/05/Bitoku.jpg");
+}
+
+.slider-img-2 {
+  background-image: url("https://www.board-game.co.uk/wp-content/uploads/2022/05/Combined-Arms.jpg");
+}
+
+.slider-img-3 {
+  background-image: url("https://www.board-game.co.uk/wp-content/uploads/2022/02/Outlet-Slider.jpg");
+}
+
+.selected-slider-img {
+  width: 100%;
+}
+
+
+.product-promotion__control {
+  /* width: 30%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  align-self: center;
+  position: absolute;
+  top: 85%;
+}
+
+.control__slide-btn {
+  width: 1.8rem;
+  height: 0.3rem;
+  border-radius: 0;
+  border: none;
+  outline: 1px solid var(--bg-ter-clr);
+  background-color: var(--bg-pri-clr);
+}
+
+.control__slide-btn[data-selected="true"] {
+  background-color: var(--bg-ter-clr);
+  /* opacity: 0.8; */
+}
+
+
+
+
+
+section {
+  /* outline: 2px solid black; */
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1.5rem;
+}
+
+.product-category {
+  gap: 1rem;
+  width: 100%;
+}
+
+.product-category__options {
+  width: 82.5%;
+  display: flex;
+  overflow: auto;
+  justify-content: space-between;
+  gap: 5%;
+  padding-inline: 0.5rem;
+}
+
+
+.product-category__options::-webkit-scrollbar {
+  display: none;
+}
+
+.product-category__options div:hover {
+  transform: scale(1.02);
+  background-color: #c8f795;
+}
+
+
+.option__board-game, .option__card-game, .option__role-playing, .option__puzzle, .option__editor-choice {
+  text-align: center;
+    /* width: 19%; */
+    /* added */
+    width: 30%;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #e2f8cb;
+    border-radius: 15px;
+    padding-block: 0.625rem;
+    cursor: pointer;
+}
+
+.option__board-game img {
+  width: 70%;
+}
+
+.option__card-game img {
+  width: 60%;
+}
+
+.option__role-playing img {
+  width: 45%;
+}
+
+.option__puzzle img {
+  width: 60%;
+}
+
+.option__editor-choice img {
+  width: 60%;
+}
+
+
+
+.product-trend__options, .product-best-seller__options {
+  /* outline: 2px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* added */
+  overflow: auto;
+  padding-inline: 0.5rem;
+  gap: 10%;
+  /* gap: 2.5%; */
+}
+
+
+.product-trend__options::-webkit-scrollbar, .product-best-seller__options::-webkit-scrollbar {
+  display: none;
+  /* position: relative; */
+}
+
+
+
+
+.option__item {
+  /* width: 28%; */
+  /* max-width: 150px; */
+  /* added */
+  width: 45%;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: 1px solid black;
+  margin-block: 1rem;
+  padding: 0.5rem;
+  padding-top: 1.5rem;
+  border-radius: 1rem;
+  background-color: #fff8e0;
+}
+
+.option__item img {
+  width: 65%;
+  cursor: pointer;
+}
+
+.option__item img:hover {
+  transform: scale(1.01);
+}
+
+.option__item p {
+  font-size: 0.5rem;
+  margin-block: 0.25rem;
+  font-weight: bold;
+}
+
+.option__item p:nth-of-type(2) {
+  color: var(--text-highlight-clr);
+}
+
+.option__item button {
+  padding: 0.5rem 1rem;
+  font-size: 0.5rem;
+  border-radius: 0.8rem;
+  margin-top: 0.5rem;
+  background-color: #ffcc30;
+}
+
+.option__item button:hover {
+  background-color: #f9c015;
+}
+
+.view-all-btn {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.6rem;
+  border-radius: 0.2rem;
+  background-color: #2c9cdb;
+  color: var(--text-ter-clr);
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.view-all-btn:hover {
+  background-color: #0d8ed9;
+}
+
+.product-trend a, .product-best-seller a {
+  align-self: flex-end;
+}
+
+.customer-review {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  /* outline: 2px solid blue; */
+  width: 100%;
+}
+
+.customer-review__preview {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem 3rem;
+  width: 100%;
+
+  /* outline: 2px solid red; */
+}
+
+.preview__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 75%;
+}
+
+.preview__link {
+  width: 75%;
+  text-align: right;
+}
+
+.preview__link a {
+  font-size: 0.4rem;
+  color: var(--text-pri-clr);
+  text-decoration: underline;
+}
+
+.preview__link a:hover {
+  font-weight: bold;
+}
+
+
+
+
+.customer-review__input {
+  /* outline: 2px solid red; */
+  width: 80%;
+  padding: 1rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content__textarea {
+  padding-inline: 0.5rem;
+  width: 100%;
+  font-size: 0.6rem;
+  line-height: 1.8;
+  line-break: auto;
+  aspect-ratio: 7/2;
+  resize: none;
+}
+
+.input__btn {
+  align-self: flex-end;
+}
+
+.input__btn button {
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #2c9cdb;
+  color: var(--text-ter-clr);
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.input__btn button:hover {
+  background-color: #0d8ed9;
+}
+
+.product-category h2, .product-trend h2, .product-best-seller h2, .preview__content h2 {
+  font-size: 12px;
+}
+
+.product-category__options p, .option__item p, .option__item button, .view-all-btn, .preview__content p, .input__content h3, .input__content textarea, .input__btn button {
+  font-size: 10px;
+}
+
+.option__item p:nth-of-type(2) {
+  font-size: 12px;
+}
+
+.preview__link a {
+  font-size: 8px;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+
+  .gallery__img {
+    aspect-ratio: 5/1;
+  }
+
+  .product-promotion, section {
+    width: 100%;
+  }
+
+  .product-trend, .product-best-seller {
+    width: 52.25%;
+    /* outline: 1px solid black; */
+  }
+
+  .option__board-game, .option__card-game, .option__role-playing, .option__puzzle, .option__editor-choice {
+    max-width: 110px;
+  }
+
+  .product-category {
+    width: 60%;
+  }
+
+  .product-category__options {
+    width: 100%;
+    justify-content: center;
+    gap: 2%;
+  }
+
+  .option__item p {
+    font-size: 12px;
+  }
+
+  .option__item button {
+    padding: 0.8rem 2rem;
+    font-size: 9px;
+  }
+
+  .preview__content {
+    width: 50%;
+    padding-block: 3rem;
+  }
+
+
+  .preview__link {
+    width: 50%;
+  }
+
+  .product-category__options {
+    width: 82.5%;
+    justify-content: space-between;
+  }
+
+  .customer-review__input {
+    width: 70%;
+  }
+
+  .content__textarea {
+    /* width: 50%; */
+    /* aspect-ratio: 2/1; */
+  }
+
+
+
+  .product-category h2, .product-trend h2, .product-best-seller h2, .preview__content h2 {
+    font-size: 16px;
+  }
+  
+  .product-category__options p, .option__item p, .view-all-btn, .preview__content p, .input__content h3, .input__content textarea, .input__btn button {
+    font-size: 14px;
+  }
+  
+  .option__item p:nth-of-type(2) {
+    font-size: 14px;
+  }
+  
+  .preview__link a {
+    font-size: 10px;
+  }
+  
+}
+
+@media (min-width: 1020px) {
+  .option__item {
+    width: 25%;
+    padding-block: 2rem;
+  }
+
+  .option__board-game, .option__card-game, .option__role-playing {
+    /* flex: auto; */
+    width: 20%;
+    /* max-width: 115px; */
+    /* width: 40%; */
+    aspect-ratio: 9/10;
+  }
+
+  .preview__content {
+    width: 50%;
+    /* outline: 1px solid black; */
+  }
+
+  .preview__link {
+    width: 50%;
+  }
+
+  .customer-review__input {
+    width: 50%;
+  }
+
+  .content__textarea {
+    width: 100%;
+    aspect-ratio: 3/1;
+  }
+
+  .product-trend__options, .product-best-seller__options {
+    gap: 0;
+  }
+
+  .option__item {
+    width: 30%;
+  }
+
+}

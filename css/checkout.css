@@ -1,0 +1,411 @@
+@import url(root.css);
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: var(--content-font-family);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+main h2, main legend {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+main label, main span, main button, main a, main select, main input {
+  font-size: 0.6rem;
+}
+
+main input, main select {
+  padding: 0.2rem;
+}
+
+.billing-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.billing-error {
+  /* outline: 1px solid black; */
+  width: 100%;
+  background-color: #f2dedd;
+  padding: 1rem 1rem;
+  color: #e93d34;
+  align-items: center;
+  justify-content: flex-start;
+  display: none;
+}
+
+.billing-error--display {
+  display: flex;
+}
+
+.billing-error span {
+  font-size: 10px;
+}
+
+.billing-info h2 {
+  align-self: flex-start;
+}
+
+.user-information {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-name, .user-company, .user-phone, .user-email, .user-country-state, .user-city-surburb, .user-street, .user-department {
+  width: 100%;
+}
+
+.user-name, .user-country-state, .user-city-surburb, .user-street {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-name__first, .user-name__last {
+  width: 48%;
+  /* outline: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name input {
+  width: 100%;
+}
+
+.user-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.user-phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-phone__detail {
+  display: flex;
+  align-items: center;
+  height: 1.4rem;
+}
+
+.phone-region__fieldset {
+  border: none;
+  width: 20%;
+  height: 100%;
+  display: flex;
+}
+
+.phone-region-select {
+  width: 100%;
+  font-size: 0.6rem;
+  height: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+.phone-number-input {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border-width: 1px;
+}
+
+.user-email {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-country__detail, .user-state__detail, .user-city__detail, .user-surburb__detail, .user-street__name, .user-street__num {
+  width: 48%;
+  /* outline: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+
+.user-department {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.shipping-info {
+  width: 90%;
+  max-width: 450px;
+  align-self: flex-start;
+  margin-left: 5%;
+}
+
+/* let shipping info stick to the left */
+
+.shipping-fieldset {
+  border: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shipping-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.shipping-info__free, .shipping-info__express {
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  align-items: center;
+  outline: 1px solid rgba(0,0,0,0.5);
+  padding: 0.8rem 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+
+}
+
+.shipping-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.shipping-alternative {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  /* outline: 1px solid blue; */
+  padding-inline: 1rem;
+}
+
+.shipping-delivery__selected {
+  background-color: #efefef;
+}
+
+.order-review {
+  width: 100%;
+  padding: 1.2rem;
+  padding-right: 2.5rem;
+  background-color: #fff8e0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.order-review__detail {
+  width: 100%;
+  padding-left: 1.5rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.2rem;
+}
+
+.detail__title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.detail__title h3 {
+  font-size: 0.7rem;
+}
+
+.detail__info {
+  width: 100%;
+  display: grid;
+  padding-left: 0.5rem;
+  grid-template-columns: 90% 10%;
+  
+}
+
+.detail__info span {
+  font-size: 0.6rem;
+}
+
+.order-review__wrapup {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 0.5rem;
+}
+
+.wrapup__coupon, .wrapup__total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.coupon-input {
+  background: transparent;
+  width: 50%;
+}
+
+.order-review__wrapup label, .wrapup__total-price h3 {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.wrapup__total-price span {
+  font-weight: bold;
+  color: var(--text-highlight-clr);
+}
+
+.proceed-payment-btn {
+  width: 70%;
+  padding-block: 0.8rem;
+  border-radius: 0.6rem;
+  border: none;
+  color: var(--text-ter-clr);
+  background-color: #2c9cdb;
+  cursor: pointer;
+  text-align: center;
+}
+
+.proceed-payment-btn:hover {
+  background-color: #0d8ed9;
+}
+
+
+main label, main p {
+  font-size: 10px;
+}
+
+.order-review label, .order-review span, .order-review h3 {
+  font-size: 10px;
+}
+
+.proceed-payment-btn {
+  font-size: 10px;
+}
+
+main input, main select {
+  font-size: 10px;
+}
+
+.phone-region-select, .phone-number-input {
+  font-size: 10px;
+}
+
+.billing-info h2, .shipping-info legend, .order-review h2 {
+  font-size: 12px;
+}
+
+
+@media (min-width: 768px) {
+
+  main label, main p {
+    font-size: 14px;
+  }
+
+  .billing-error span {
+    font-size: 14px;
+  }
+
+  .order-review label, .order-review span, .order-review h3 {
+    font-size: 14px;
+  }
+
+  .proceed-payment-btn {
+    font-size: 14px;
+  }
+
+  main input, main select {
+    font-size: 14px;
+  }
+
+  .user-phone__detail {
+    height: 1.7rem;
+  }
+
+  .phone-region-select, .phone-number-input {
+    font-size: 14px;
+  }
+
+  .billing-info h2, .shipping-info legend, .order-review h2 {
+    font-size: 16px;
+  }
+
+  .billing-info {
+    width: 65%;
+  }
+
+  .shipping-info {
+    width: 42%;
+    margin-left: 17.5%;
+  }
+
+  .shipping-info__free, .shipping-info__express {
+    gap: 1rem;
+  }
+
+  .order-review {
+    width: 40%;
+    max-width: 400px;
+    align-self: flex-end;
+    margin-right: 17.5%;
+  }
+
+  .order-review__wrapup {
+    width: 100%;
+    padding-left: 1.5rem;
+    /* outline: 1px solid black; */
+  }
+
+  .coupon-input {
+    width: 35%;
+  }
+
+  .proceed-payment-btn {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .billing-info {
+    width: 55%;
+  }
+
+  .shipping-info {
+    width: 30%;
+    margin-left: 22.5%;
+  }
+
+  .order-review {
+    width: 30%;
+    max-width: 400px;
+    align-self: flex-end;
+    margin-right: 22.5%;
+  }
+
+  .order-review__wrapup {
+    width: 100%;
+    padding-left: 1.5rem;
+    /* outline: 1px solid black; */
+  }
+
+  .coupon-input {
+    width: 35%;
+  }
+
+  .proceed-payment-btn {
+    width: 55%;
+  }
+}

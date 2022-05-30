@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" >
+    <title>Spelshop</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/product-listing.css">
+    <link rel="icon" href="/res/favicon-32x32.png">
+    <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
+  </head>  
+  <body>
+    <header>
+      <div class="header-section">
+        <a href="index.html" class="header-section__logo">
+          <img class="logo__img" src="/res/apple-touch-icon.png" alt="iconic spelshop character">
+          <h1 class="logo__title">Spelshop</h1>
+        </a>
+        <div class="header-section__search">
+          <input class="search__input" type="text" placeholder="Search ...">
+          <span class="search__icon"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="header-section__tools">
+          <ul class="tools__functions">
+            <li class="functions__search" arial-label="Search Icon">
+              <a href="" class="search__icon"><i class="fa fa-search"></i></a>
+            </li>
+            <li class="functions__user" arial-label="User Icon">
+              <a href="" class="user__icon"><i class="fa far fa-user"></i></a>
+            </li>
+            <li class="functions__shopping-cart" arial-label="Shopping Cart Icon">
+              <a href="" class="cart__icon"><i class="fa fa-shopping-cart"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="nav-bar">
+        <div class="nav-bar__outter-btn">
+          <div class="nav-bar__inner-btn"></div>
+        </div>
+        <div class="nav-bar__cover"></div>
+        <div class="nav-bar__sub-nav">
+          <div class="sub-nav__menu">
+            <h2>MENU</h2>
+            <div class="exit-menu-outter-btn">
+              <div class="exit-menu-inner-btn"></div>
+            </div>
+          </div>
+          <div class="sub-nav__item drop-down-game">
+            <span class="sub-nav__item-name"><span>Games</span><i class="fas fa-angle-down drop-down-toggle__indicator"></i></span>
+            <ul class="sub-nav__item-list">
+              <li><a href="product-listing.html">View All Games</a></li>
+              <li><a href="">Board Games</a></li>
+              <li><a href="">Card Games</a></li>
+              <li><a href="">Dice Games</a></li>
+              <li><a href="">Role Playing Games</a></li>
+              <li><a href="">Editor's Choice</a></li>
+            </ul>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">Puzzles</span></a>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">Trending</span></a>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">Best Sellers</span></a>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">New Arrivals</span></a>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">Accessories</span></a>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">Account</span></a>
+          </div>
+          <div class="sub-nav__item">
+            <a href=""><span class="sub-nav__item-name">About us</span></a>
+          </div>
+          <div class="sub-nav__item drop-down-help">
+            <span class="sub-nav__item-name"><span>Help</span><i class="fas fa-angle-down drop-down-toggle__indicator"></i></span>
+            <ul class="sub-nav__item-list">
+              <li><a href="">Contact us</a></li>
+              <li><a href="">F&Q</a></li>
+              <li><a href="">Terms and conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="bread-crumb">
+        <span><a href="index.html" class="bread-crumb__prev-link">Home</a> &lt; All games</span></span>
+      </div>
+      <section class="product-category">
+        <h2>CATEGORY</h2>
+        <div class="product-category__options">
+          <div class="option__board-game">
+            <img src="/res/board-game-category.png" alt="board game category">
+            <p>Board game</p>
+          </div>
+          <div class="option__card-game">
+            <img src="/res/card-game-category.png" alt="card game category">
+            <p>Card game</p>
+          </div>
+          <div class="option__puzzle">
+            <img src="/res/puzzle-category.png" alt="puzzle category">
+            <p>Puzzle</p>
+          </div>
+          <div class="option__role-playing">
+            <img src="/res/rpg-category.png" alt="rpg category">
+            <p>RPG Game</p>
+          </div>
+          <div class="option__editor-choice">
+            <img src="/res/editor-choice-category.png" alt="editor's choice category">
+            <p>Editor's Choice</p>
+          </div>
+        </div>
+      </section>
+      <section class="product">
+        <h2>ALL GAMES</h2>
+        <div class="product__sort-by">
+          <form action="" method="" aria-label="product sort by selection">
+            <fieldset>
+              <select name="sort-by__menu" class="sort-by__menu">
+                <option value="" disabled selected>Sort by</option>
+                <option value="volvo">Most popular</option>
+                <option value="saab">Latest</option>
+                <option value="opel">Price: from low to high</option>
+                <option value="audi">Price: from high to low</option>
+              </select>
+            </fieldset>
+          </form>
+        </div> 
+        <div class="product__options">
+          <div class="option__item">
+            <a href="product-detail.html"><img src="/res/Screen Shot 2022-05-27 at 4.29.25 PM.png" alt="Cartographers"></a>
+            <p>CARTOGRAPHERS</p>
+            <p class="item__price-tag">$8.29</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.31.40 AM.png" alt="Carnegie"></a>
+            <p>CARNEGIE</p>
+            <p class="item__price-tag">$45.29</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.38.17 AM.png" alt="Filler"></a>
+            <p>FILLER</p>
+            <p class="item__price-tag">$11.79</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.25.00 PM.png" alt="Tash Kalar"></a>
+            <p>TASH KALAR</p>
+            <p class="item__price-tag">$23.39</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.29.53 PM.png" alt="Combat Commander"></a>
+            <p>COMBAT COMMANDER</p>
+            <p class="item__price-tag">$59.97</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.32.32 PM.png" alt="Falling Sky"></a>
+            <p>FALLING SKY</p>
+            <p class="item__price-tag">$60.73</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.34.35 PM.png" alt="A Distant Plain"></a>
+            <p>A DISTANT PLAIN</p>
+            <p class="item__price-tag">$62.30</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 4.36.54 PM.png" alt="Pendragon"></a>
+            <p>PENDRAGON</p>
+            <p class="item__price-tag">$49.99</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 5.57.17 PM.png" alt="The Kings Guild"></a>
+            <p>THE KINGS GUILD</p>
+            <p class="item__price-tag">$ 45.79</p>
+            <button type="button">ADD TO CART</button>
+          </div>            
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 6.00.57 PM.png" alt="PANDAMEIC: The Lab"></a>
+            <p>PANDAMEIC: THE LAB</p>
+            <p class="item__price-tag">$30.99</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 6.03.40 PM.png" alt="Codenames: Marvel"></a>
+            <p>CODENAMES: MARVEL</p>
+            <p class="item__price-tag">$20.49</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+          <div class="option__item">
+            <a href=""><img src="/res/Screen Shot 2022-05-24 at 6.09.10 PM.png" alt="Explore & Draw"></a>
+            <p>EXPLORE & DRAW</p>
+            <p class="item__price-tag">$ 29.99</p>
+            <button type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="product__load-pages">
+          <button class="load-pages__btn">Load more products</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="subscription">
+        <p>Subscribe to get our latest news and special offers !!!</p>
+        <div class="subscription__content">
+          <input type="text" placeholder="Your email address" class="content__email">
+          <button type="button" class="content__btn">Subscribe</button>
+        </div>
+      </div>
+      <div class="short-cut">
+        <div class="short-cut__category">
+          <div class="category__drop-down-toggle">
+            <h2>PRODUCTS</h2>
+            <span class="drop-down-toggle__indicator"><i class="fas fa-angle-down"></i></span>
+          </div>
+          <ul class="category__drop-down-links" >
+            <li><a href="" class="drop-down-links__option">Board games</a></li>
+            <li><a href="" class="drop-down-links__option">Puzzles</a></li>
+            <li><a href="" class="drop-down-links__option">Card games</a></li>
+            <li><a href="" class="drop-down-links__option">Role-playing games</a></li>
+            <li><a href="" class="drop-down-links__option">Editor's choice</a></li>
+          </ul>
+        </div>
+        <div class="short-cut__category">
+          <div class="category__drop-down-toggle">
+            <h2>ACCOUNT</h2>
+            <span class="drop-down-toggle__indicator"><i class="fas fa-angle-down"></i></span>
+          </div>
+          <ul class="category__drop-down-links" >
+            <li><a href="" class="drop-down-links__option">Personal info</a></li>
+            <li><a href="" class="drop-down-links__option">Orders</a></li>
+          </ul>
+        </div>
+        <div class="short-cut__category">
+          <div class="category__drop-down-toggle">
+            <h2>ABOUT US</h2>
+            <span class="drop-down-toggle__indicator"><i class="fas fa-angle-down"></i></i></span>
+          </div>
+          <ul class="category__drop-down-links" >
+            <li><a href="" class="drop-down-links__option">Contacts</a></li>
+            <li><a href="" class="drop-down-links__option">Location</a></li>
+            <li><a href="" class="drop-down-links__option">Delivery</a></li>
+            <li><a href="" class="drop-down-links__option">Customer care</a></li>
+          </ul>
+        </div>
+        <div class="short-cut__category">
+          <div class="category__drop-down-toggle">
+            <h2>HELP</h2>
+            <span class="drop-down-toggle__indicator"><i class="fas fa-angle-down"></i></span>
+          </div>
+          <ul class="category__drop-down-links" >
+            <li><a href="" class="drop-down-links__option">F&Q</a></li>
+            <li><a href="" class="drop-down-links__option">Terms and conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="/javascript/header.js" defer></script>
+    <script src="/javascript/footer.js" defer></script>
+  </body>
+</html>

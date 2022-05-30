@@ -1,0 +1,110 @@
+@import url(root.css);
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-family: var(--content-font-family);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-block: 4.5rem;
+}
+
+main h2, main legend {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+main label, main span, main button, main a, main select, main input {
+  font-size: 0.6rem;
+}
+
+main input, main select {
+  padding: 0.2rem;
+}
+
+.order-placed-description, .post-order-alternatives {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-placed-description {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.order-placed-description img {
+  width: 35%;
+  aspect-ratio: 1;
+}
+
+.order-placed-description h2 {
+  font-size: 12px;
+}
+
+.post-order-alternatives a {
+  width: 40%;
+  text-align: center;
+  padding: 0.7rem 0.4rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.continue-shop-btn {
+  background-color: #ffcc30;
+  color: var(--text-pri-clr);
+}
+
+.continue-shop-btn:hover {
+  background-color: #f9c015;
+}
+
+
+.create-account-btn {
+  background-color: #2c9cdb;
+  color: var(--text-ter-clr);
+}
+
+.create-account-btn:hover {
+  background-color: #0d8ed9;
+}
+
+@media (min-width: 768px) {
+
+  .order-placed-description h2 {
+    font-size: 16px;
+  }
+
+  .post-order-alternatives a {
+    font-size: 14px;
+  }
+
+  .order-placed-description, .post-order-alternatives {
+    width: 65%;
+  }
+
+  .order-placed-description img {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .order-placed-description, .post-order-alternatives {
+    width: 55%;
+  }
+
+  .order-placed-description img {
+    width: 25%;
+  }
+}
+
