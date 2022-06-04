@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rum+Raisin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/checkout.css">
+  <link rel="stylesheet" href="css/payment.css">
   <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
-</head>  
+</head> 
 <body>
   <header>
     <div class="header-section">
-      <a href="/index.html" class="header-section__logo">
+      <a href="index.html" class="header-section__logo">
         <img class="logo__img" src="/res/spelshop-logo.png" alt="iconic spelshop character">
         <h1 class="logo__title">Spelshop</h1>
       </a>
@@ -93,156 +93,36 @@
     </nav>
   </header>
   <main>
-    <section class="billing-info">
-      <div class="billing-error">
+    <section class="payment">
+      <div class="payment-error">
         <span>Please fill out all the <strong>required fields </strong> below</span>
       </div>
-      <h2>Billing Details:</h2>
-      <form class="user-information" action="" method="POST">
-        <div class="user-name">
-          <div class="user-name__first">
-            <label for="first-name">First Name *</label>
-            <input type="text" id="first-name" name="first-name" required="required">
+      <h2>Payment Details:</h2>
+      <form action="" method="POST">
+        <div class="payment__card-number">
+          <label for="card-number">Credit Card Number *</label>
+          <input type="text" id="card-number" name="card-number" autocomplete="nope" placeholder="0000000000000000" required="required" maxlength="16" pattern="[0-9]+">
+        </div>
+        <div class="payment__card-holder">
+          <label for="card-holder">Credit Card Holder Name *</label>
+          <input type="text" id="care-holder" name="card-holder" autocomplete="nope" required="required">
+        </div>
+        <div class="payment__card-meta">
+          <div class="card-meta__expiry">
+            <label for="card-expiry">Valid Thru *</label>
+            <input type="text" id="card-expiry" name="card-expiry" autocomplete="nope" placeholder="MM/YY" required="required" maxlength="5" pattern="[0-9]+">
           </div>
-          <div class="user-name__last">
-            <label for="last-name">Last Name *</label>
-            <input type="text" id="last-name" name="last-name" required="required">
+          <div class="card-meta__security-code">
+            <label for="security-code">CVV Code *</label>
+            <input type="text" id="security-code" name="security-code" autocomplete="nope" placeholder="000" required="required" maxlength="3" pattern="[0-9]+">
           </div>
         </div>
-        <div class="user-company">
-          <label for="company-name">Company Name</label>
-          <input type="text" id="company-name" name="company-name">
-        </div>
-        <div class="user-phone">
-          <label for="phone-number">Phone</label>
-          <label for="phone-region"></label>
-          <div class="user-phone__detail">
-            <fieldset class="phone-region__fieldset">
-              <select name="phone-region" id="phone-region" class="phone-region-select">
-                <option value="" disabled selected>Choose</option>
-                <option value="aus">+61</option>
-              </select>  
-            </fieldset>
-            <input type="text" id="phone-number" class="phone-number-input" name="phone-number">
-          </div>
-        </div>
-        <div class="user-email">
-          <label for="email">Email *</label>
-          <input type="text" id="email" name="email" required="required">
-        </div>
-        <div class="user-country-state">  
-          <div class="user-country__detail">
-            <label for="country">Country *</label>
-            <select name="country" id="country" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="aus">Australia</option>
-            </select>
-          </div>
-          <div class="user-state__detail">
-            <label for="state">State *</label>
-            <select name="state" id="state" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="vic">VIC</option>  
-            </select>
-          </div>
-        </div>
-        <div class="user-city-surburb">
-          <div class="user-city__detail">
-            <label for="city">City/Town *</label>
-            <select name="city" id="city" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="melb">Melbourne</option>
-            </select>
-          </div>
-          <div class="user-surburb__detail">
-            <label for="surburb">Surburb *</label>
-            <select name="surburb" id="surburb" required="required">
-              <option value="" disabled selected>Choose</option>
-              <option value="carlton">Carlton</option>
-              <option value="port melbourne">Port Melbourne</option>
-              <option value="parkville">Parkville</option>
-              <option value="docklands">Docklands</option>
-              <option value="southbank">Southbank</option>
-              <option value="south yarra">South Yarra</option>
-              <option value="west melbourne">West Melbourne</option>
-            </select>
-          </div>
-        </div>
-        <div class="user-street">
-          <div class="user-street__name">
-            <label for="street-name">Street Name *</label>
-            <input type="text" id="street-name" required="required">
-          </div>
-          <div class="user-street__num">
-            <label for="street-num">Street Number *</label>
-            <input type="text" id="street-num" required="required">
-          </div>
-        </div>
-        <div class="user-department">
-          <label for="department">Department Name, Department Floor</label>
-          <input type="text" id="department">
-        </div>
+        <a href="" role="button" class="payment__paypal-btn" aria-label="PayPal Alternative Payment Method">
+          <img src="/res/paypal-icon.png" alt="PayPal">
+        </a>
+        <a href="payment-complete.html" role="button" class="payment__submit-btn">PROCEED & PLACE ORDER</a>
       </form>
     </section>
-    <section class="shipping-info">
-      <form action="" class="shipping-form">
-        <fieldset class="shipping-fieldset">
-          <legend>Shipping Details:</legend>
-          <div class="shipping-info__free shipping-delivery__selected">
-            <input type="radio" id="free-shipping" name="shipping-method" checked>
-            <div class="shipping-description">
-              <label for="free-shipping">Free Shipping</label>
-              <p><strong>Delivered:</strong>
-                <br>
-                Mon 30th May - Tue 31st May (Tracked 48)</p>
-            </div>
-          </div>
-          <div class="shipping-info__express">
-            <input type="radio" id="express-shipping" name="shipping-method">
-            <div class="shipping-description">
-              <label for="express-shipping">Express + $80.99</label>
-              <p>
-                <strong>Delivered:</strong>
-                <br>
-                Get it Tomorrow, Sat 28th May! (Tracked 24)
-              </p>
-            </div>
-          </div>
-        </fieldset>
-        <div class="shipping-alternative">
-          <input type="checkbox" id="different-shipping" name="different-shipping">
-          <label for="different-shipping">Shipping to another address</label>
-        </div>
-      </form>
-    </section>
-    <section class="order-review">
-      <h2>Order Overview:</h2>
-      <div class="order-review__detail">
-        <div class="detail__title">
-          <h3>Product</h3>
-          <h3>Price</h3>
-        </div>
-        <div class="detail__info">
-          <span>Cartographers</span>
-          <span>$8.29</span>
-        </div>
-        <div class="detail__info">
-          <span>Carnegie</span>
-          <span>$45.29</span>
-        </div>
-      </div>
-      <div class="order-review__wrapup">
-        <div class="wrapup__coupon">
-          <label for="coupon">Coupon</label>
-          <input class="coupon-input" type="text" id="coupon" name="couple">
-        </div>
-        <div class="wrapup__total-price">
-          <h3>TOTAL</h3>
-          <span>$53.58</span>
-        </div>
-      </div>
-    </section>
-    <a href="payment.html" class="proceed-payment-btn" role="button">PAYMENT</a>
   </main>
   <footer>
     <div class="subscription">
@@ -301,9 +181,9 @@
     </div>
   </footer>
   <!-- scripts -->
-  <script src="/javascript/nav-bar-control.js" defer></script>
-  <script src="/javascript/footer-control.js" defer></script>
-  <script src="/javascript/product-preview-selection.js" defer></script>
-  <script src="/javascript/checkout-validation.js"></script>
+  <script src="javascript/nav-bar-control.js" defer></script>
+  <script src="javascript/footer-control.js" defer></script>
+  <script src="javascript/product-preview-selection.js" defer></script>
+  <script src="javascript/payment-validation.js"></script>
 </body>
 </html>

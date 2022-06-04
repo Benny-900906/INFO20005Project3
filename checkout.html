@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rum+Raisin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/shopping-cart.css">
+  <link rel="stylesheet" href="css/checkout.css">
   <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
-</head>   
+</head>  
 <body>
   <header>
     <div class="header-section">
-      <a href="/index.html" class="header-section__logo">
+      <a href="index.html" class="header-section__logo">
         <img class="logo__img" src="/res/spelshop-logo.png" alt="iconic spelshop character">
         <h1 class="logo__title">Spelshop</h1>
       </a>
@@ -93,163 +93,156 @@
     </nav>
   </header>
   <main>
-    <div class="order-panel">
-      <div class="order-summary">
-        <div class="order-summary__header">
-          <h2>PRODUCT</h2>
-          <h2>PRICE</h2>
-          <h2>QUANTITY</h2>
-          <h2>TOTAL</h2>
-        </div>
-        <hr>
-        <div class="order-summary__product">
-          <div class="product__detail">
-            <img src="/res/cartographers.png" alt="Cartographers">
-            <span>Cartographers</span>
+    <section class="billing-info">
+      <div class="billing-error">
+        <span>Please fill out all the <strong>required fields </strong> below</span>
+      </div>
+      <h2>Billing Details:</h2>
+      <form class="user-information" action="" method="POST">
+        <div class="user-name">
+          <div class="user-name__first">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required="required">
           </div>
-          <div class="product__price">
-            <span>$8.29</span>
-          </div>
-          <div class="product__quantity">
-            <div class="quantity__wrap">
-              <div class="quantity__control">
-                <button class="quantity__decrement-btn">-</button>
-                <span class="quantity__amount">1</span>
-                <button class="quantity__increment-btn">+</button>
-              </div>
-              <a class="quantity__reset" href="">remove</a>
-            </div>
-          </div>
-          <div class="product__total">
-            <span>$8.29</span>
+          <div class="user-name__last">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required="required">
           </div>
         </div>
-        <hr class="product-separate">
-        <div class="order-summary__product">
-          <div class="product__detail">
-            <img src="/res/carnegie.png" alt="Carnegie">
-            <span>Carnegie</span>
+        <div class="user-company">
+          <label for="company-name">Company Name</label>
+          <input type="text" id="company-name" name="company-name">
+        </div>
+        <div class="user-phone">
+          <label for="phone-number">Phone</label>
+          <label for="phone-region"></label>
+          <div class="user-phone__detail">
+            <fieldset class="phone-region__fieldset">
+              <select name="phone-region" id="phone-region" class="phone-region-select">
+                <option value="" disabled selected>Choose</option>
+                <option value="aus">+61</option>
+              </select>  
+            </fieldset>
+            <input type="text" id="phone-number" class="phone-number-input" name="phone-number">
           </div>
-          <div class="product__price">
-            <span>$45.29</span>
+        </div>
+        <div class="user-email">
+          <label for="email">Email *</label>
+          <input type="text" id="email" name="email" required="required">
+        </div>
+        <div class="user-country-state">  
+          <div class="user-country__detail">
+            <label for="country">Country *</label>
+            <select name="country" id="country" required="required">
+              <option value="" disabled selected>Choose</option>
+              <option value="aus">Australia</option>
+            </select>
           </div>
-          <div class="product__quantity">
-            <div class="quantity__wrap">
-              <div class="quantity__control">
-                <button class="quantity__decrement-btn">-</button>
-                <span class="quantity__amount">1</span>
-                <button class="quantity__increment-btn">+</button>
-              </div>
-              <a class="quantity__reset" href="">remove</a>
+          <div class="user-state__detail">
+            <label for="state">State *</label>
+            <select name="state" id="state" required="required">
+              <option value="" disabled selected>Choose</option>
+              <option value="vic">VIC</option>  
+            </select>
+          </div>
+        </div>
+        <div class="user-city-surburb">
+          <div class="user-city__detail">
+            <label for="city">City/Town *</label>
+            <select name="city" id="city" required="required">
+              <option value="" disabled selected>Choose</option>
+              <option value="melb">Melbourne</option>
+            </select>
+          </div>
+          <div class="user-surburb__detail">
+            <label for="surburb">Surburb *</label>
+            <select name="surburb" id="surburb" required="required">
+              <option value="" disabled selected>Choose</option>
+              <option value="carlton">Carlton</option>
+              <option value="port melbourne">Port Melbourne</option>
+              <option value="parkville">Parkville</option>
+              <option value="docklands">Docklands</option>
+              <option value="southbank">Southbank</option>
+              <option value="south yarra">South Yarra</option>
+              <option value="west melbourne">West Melbourne</option>
+            </select>
+          </div>
+        </div>
+        <div class="user-street">
+          <div class="user-street__name">
+            <label for="street-name">Street Name *</label>
+            <input type="text" id="street-name" required="required">
+          </div>
+          <div class="user-street__num">
+            <label for="street-num">Street Number *</label>
+            <input type="text" id="street-num" required="required">
+          </div>
+        </div>
+        <div class="user-department">
+          <label for="department">Department Name, Department Floor</label>
+          <input type="text" id="department">
+        </div>
+      </form>
+    </section>
+    <section class="shipping-info">
+      <form action="" class="shipping-form">
+        <fieldset class="shipping-fieldset">
+          <legend>Shipping Details:</legend>
+          <div class="shipping-info__free shipping-delivery__selected">
+            <input type="radio" id="free-shipping" name="shipping-method" checked>
+            <div class="shipping-description">
+              <label for="free-shipping">Free Shipping</label>
+              <p><strong>Delivered:</strong>
+                <br>
+                Mon 30th May - Tue 31st May (Tracked 48)</p>
             </div>
           </div>
-          <div class="product__total">
-            <span>$45.29</span>
+          <div class="shipping-info__express">
+            <input type="radio" id="express-shipping" name="shipping-method">
+            <div class="shipping-description">
+              <label for="express-shipping">Express + $80.99</label>
+              <p>
+                <strong>Delivered:</strong>
+                <br>
+                Get it Tomorrow, Sat 28th May! (Tracked 24)
+              </p>
+            </div>
           </div>
+        </fieldset>
+        <div class="shipping-alternative">
+          <input type="checkbox" id="different-shipping" name="different-shipping">
+          <label for="different-shipping">Shipping to another address</label>
+        </div>
+      </form>
+    </section>
+    <section class="order-review">
+      <h2>Order Overview:</h2>
+      <div class="order-review__detail">
+        <div class="detail__title">
+          <h3>Product</h3>
+          <h3>Price</h3>
+        </div>
+        <div class="detail__info">
+          <span>Cartographers</span>
+          <span>$8.29</span>
+        </div>
+        <div class="detail__info">
+          <span>Carnegie</span>
+          <span>$45.29</span>
         </div>
       </div>
-      <button class="order-summary__save-btn" type="button">SAVE</button>
-    </div>
-    <div class="order-requirement">
-      <h3 class="order-requirement__msg">Message</h3>
-      <textarea class="order-requirement__textarea" placeholder="Message or any special requirement(s)"  rows="4" cols="5"></textarea>
-    </div>
-    <div class="order-finale">
-      <h2 class="order-finale__total">CART TOTALS:</h2>
-      <div class="order-finale__subtotal">
-        <h3>Sub total:</h3>
-        <h3 class="subtotal__price">$53.58</h3>
+      <div class="order-review__wrapup">
+        <div class="wrapup__coupon">
+          <label for="coupon">Coupon</label>
+          <input class="coupon-input" type="text" id="coupon" name="couple">
+        </div>
+        <div class="wrapup__total-price">
+          <h3>TOTAL</h3>
+          <span>$53.58</span>
+        </div>
       </div>
-    </div>
-    <div class="order-proceed">
-      <a href="/index.html" role="button" class="order-proceed__continue-btn" type="button">CONTINUE SHOPPING</a>
-      <button type="button" class="order-proceed__checkout-btn">CHECKOUT</button>
-    </div>
-    <div class="dialog-cover content__hide"> 
-      <dialog class="auth-panel">
-        <div class="auth-header">
-          <div class="auth-header__selection auth-header__login auth-header__selected">
-            <h2>LOGIN</h2>
-          </div>
-          <div class="auth-header__selection auth-header__signup">
-            <h2>SIGN UP</h2>
-          </div>
-        </div>
-
-        <div class="auth-error">
-          <ul class="error__list" role="alert">
-            <li class="error__email">
-              <span><strong>Email Address</strong> is a required field</span>
-            </li>
-            <li class="error__password">
-              <span><strong>Password</strong> is a required field</span>
-            </li>
-            <li class="error__password-confirm">
-              <span><strong>Confirm Password</strong> is a required field</span>
-            </li>
-            <li class="error__password-inconsistent">
-              <span><strong>Confirm Password</strong> should be the same as <strong>Password</strong></span>
-            </li>
-          </ul>
-        </div>
-        <div class="auth-main">
-          <div class="auth-input__title">
-            <span>LOGIN</span>  
-            <div class="separator">
-              <hr>
-              <hr>
-            </div>
-          </div>
-          <form class="auth-main__credential">
-            <div class="credential__input">
-              <input class="credential__email" type="text" name="email-input" placeholder="Email Address" required="required">
-              <input class="credential__password" type="password" name="password-input" placeholder="Password" required="required">
-              <input class="credential__password-confirm  content__hide" type="password" name="password-confirm" placeholder="Confirm Password" required="required">
-            </div>
-            <div class="credential__recover">
-              <span class="recover__password"><a href="">Forgot your password?</a></span>
-            </div>
-            <a href="checkout.html" role="button" class="credential__verify">Sign In</a>
-          </form>
-          <a href="checkout.html" role="button" class="guest-btn">Continue as guest</a>
-        </div>
-      </dialog>
-    </div>
-    <div class="order-recommendation">
-      <h2>Recommended products:</h2>
-      <ul class="order-recommendation__product-list">
-        <li>
-          <div class="product-list__item">
-            <img src="/res/falling-sky.png" alt="Falling Sky">
-            <div class="item__meta">
-              <h3>Falling Sky</h3>
-              <span>$60.73</span>
-            </div>
-          </div>
-          <button class="product-list__add-btn">ADD TO CART</button>
-        </li>
-        <li>
-          <div class="product-list__item">
-            <img src="/res/a-distant-plain.png" alt="A Distant Plain">
-            <div class="item__meta">
-              <h3>A Distant Plain</h3>
-              <span>$62.30</span>
-            </div>
-          </div>
-          <button class="product-list__add-btn">ADD TO CART</button>
-        </li>
-        <li>
-          <div class="product-list__item">
-            <img src="/res/filler.png" alt="Filler">
-            <div class="item__meta">
-              <h3>Filler</h3>
-              <span>$11.79</span>
-            </div>
-          </div>
-          <button class="product-list__add-btn">ADD TO CART</button>
-        </li>
-      </ul>
-    </div>
+    </section>
+    <a href="payment.html" class="proceed-payment-btn" role="button">PAYMENT</a>
   </main>
   <footer>
     <div class="subscription">
@@ -308,9 +301,9 @@
     </div>
   </footer>
   <!-- scripts -->
-  <script src="/javascript/nav-bar-control.js" defer></script>
-  <script src="/javascript/footer-control.js" defer></script>
-  <script src="/javascript/authentication-selection.js" defer></script>
-  <script src="/javascript/authentication-validation.js"></script>
+  <script src="javascript/nav-bar-control.js" defer></script>
+  <script src="javascript/footer-control.js" defer></script>
+  <script src="javascript/product-preview-selection.js" defer></script>
+  <script src="javascript/checkout-validation.js"></script>
 </body>
 </html>

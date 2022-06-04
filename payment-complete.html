@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rum+Raisin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/payment.css">
+  <link rel="stylesheet" href="css/payment-complete.css">
   <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
-</head> 
+</head>  
 <body>
   <header>
     <div class="header-section">
-      <a href="/index.html" class="header-section__logo">
+      <a href="index.html" class="header-section__logo">
         <img class="logo__img" src="/res/spelshop-logo.png" alt="iconic spelshop character">
         <h1 class="logo__title">Spelshop</h1>
       </a>
@@ -93,36 +93,15 @@
     </nav>
   </header>
   <main>
-    <section class="payment">
-      <div class="payment-error">
-        <span>Please fill out all the <strong>required fields </strong> below</span>
-      </div>
-      <h2>Payment Details:</h2>
-      <form action="" method="POST">
-        <div class="payment__card-number">
-          <label for="card-number">Credit Card Number *</label>
-          <input type="text" id="card-number" name="card-number" autocomplete="nope" placeholder="0000000000000000" required="required" maxlength="16" pattern="[0-9]+">
-        </div>
-        <div class="payment__card-holder">
-          <label for="card-holder">Credit Card Holder Name *</label>
-          <input type="text" id="care-holder" name="card-holder" autocomplete="nope" required="required">
-        </div>
-        <div class="payment__card-meta">
-          <div class="card-meta__expiry">
-            <label for="card-expiry">Valid Thru *</label>
-            <input type="text" id="card-expiry" name="card-expiry" autocomplete="nope" placeholder="MM/YY" required="required" maxlength="5" pattern="[0-9]+">
-          </div>
-          <div class="card-meta__security-code">
-            <label for="security-code">CVV Code *</label>
-            <input type="text" id="security-code" name="security-code" autocomplete="nope" placeholder="000" required="required" maxlength="3" pattern="[0-9]+">
-          </div>
-        </div>
-        <a href="" role="button" class="payment__paypal-btn" aria-label="PayPal Alternative Payment Method">
-          <img src="/res/paypal-icon.png" alt="PayPal">
-        </a>
-        <a href="payment-complete.html" role="button" class="payment__submit-btn">PROCEED & PLACE ORDER</a>
-      </form>
-    </section>
+    <div class="order-placed-description">
+      <img src="/res/payment-complete.svg" alt="payment complete indicator">
+      <h2>Thank you for purchasing at Spelshop!</h2>
+      <h2>We are preparing your order!</h2>
+    </div>
+    <div class="post-order-alternatives">
+      <a href="index.html" role="button" class="continue-shop-btn" type="button">CONTINUE SHOPPING</a>
+      <a href="" role="button" class="create-account-btn" type="button">CREATE AN ACCOUNT</a>
+    </div>
   </main>
   <footer>
     <div class="subscription">
@@ -181,9 +160,7 @@
     </div>
   </footer>
   <!-- scripts -->
-  <script src="/javascript/nav-bar-control.js" defer></script>
-  <script src="/javascript/footer-control.js" defer></script>
-  <script src="/javascript/product-preview-selection.js" defer></script>
-  <script src="/javascript/payment-validation.js"></script>
+  <script src="javascript/nav-bar-control.js" defer></script>
+  <script src="javascript/footer-control.js" defer></script>
 </body>
 </html>
