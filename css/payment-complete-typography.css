@@ -1,0 +1,19 @@
+.order-placed-description h2 {
+  font-size: var(--h2-font-size--sm);
+}
+
+.post-order-alternatives a {
+  font-weight: bold;
+  font-size: var(--content-font-size--sm);
+}
+
+@media (min-width: 768px) {
+
+  .order-placed-description h2 {
+    font-size: var(--h2-font-size--md);
+  }
+
+  .post-order-alternatives a {
+    font-size: var(--content-font-size--md);
+  }
+}

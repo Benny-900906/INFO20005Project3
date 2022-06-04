@@ -1,17 +1,9 @@
-@import url(footer-layout.css);
-@import url(footer-typography.css);
-@import url(footer-color.css);
-
-/* Whole CSS below */
-
-/* footer {
+footer {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  background-color: var(--footer-bg-clr);
-  color: var(--text-qua-clr);
 }
 
 .subscription {
@@ -31,7 +23,6 @@
   gap: 0.2rem;
 }
 
-
 .content__email, .content__btn {
   padding: 0.3rem 0.2rem;
   outline: none;
@@ -41,27 +32,11 @@
 .content__email {
   width: 25%;
   min-width: 200px;
-  line-height: 1.4;
   padding-inline: 0.2rem;
-  color: var(--text-qua-clr);
-  background-color: var(--subscribe-email-bg-clr);
-}
-
-.content__email::placeholder {
-  color: var(--text-qua-clr);
-  opacity: 0.5;
 }
 
 .content__btn {
-  line-height: 1.4;
   padding-inline: 0.6rem;
-  border-color: #ffffff;
-  color: inherit;
-  background-color: var(--subscribe-btn-bg-clr);
-}
-
-.content__btn:hover {
-  background-color: var(--subscribe-btn-bg-clr--hover);
 }
 
 .short-cut {
@@ -94,21 +69,9 @@
   transition: all 200ms ease-in-out;
 }
 
-.drop-down-links__option {
-  color: var(--text-qua-clr);
-}
-
-.drop-down-links__option:hover {
-  color: var(--text-pri-clr)
-}
-
 .expand-drop-down + .category__drop-down-links {
   max-height: 1000px;
   padding-block: 0.5rem;
-}
-
-.category__drop-down-toggle h2 {
-  font-size: var(--h2-font-size--sm);
 }
 
 .drop-down-toggle__indicator {
@@ -119,15 +82,15 @@
   transform: rotate(180deg);
 }
 
-.drop-down-links__option, .content__email, .content__btn, .subscription p {
-  font-size: var(--content-font-size--sm);
-}
-
 @media (min-width: 768px) {
   footer {
     width: 100%;
     gap: 2rem;
     padding-bottom: 4rem;
+  }
+
+  .subscription {
+    max-width: 490px;
   }
 
   .category__drop-down-links {
@@ -140,6 +103,7 @@
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
+    max-width: 940px;
   }
 
   .short-cut__category {
@@ -161,13 +125,5 @@
   .subscription {
     gap: 1rem;
   } 
-
-  .category__drop-down-toggle h2 {
-    font-size: var(--h2-font-size--md);
-  }
-
-  .content__email, .content__btn, .subscription p, .drop-down-links__option {
-    font-size: var(--content-font-size--md);
-  }
-} */
+}
 

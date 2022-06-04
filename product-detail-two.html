@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rum+Raisin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/product-detail.css">
   <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
-</head> 
+</head>  
 <body>
   <header>
     <div class="header-section">
@@ -93,35 +93,80 @@
     </nav>
   </header>
   <main>
-    <section class="payment">
-      <div class="payment-error">
-        <span>Please fill out all the <strong>required fields </strong> below</span>
+    <div class="bread-crumb">
+      <span><a href="index.html" class="bread-crumb__prev-link">Home</a> &lt; <a href="product-listing.html" class="bread-crumb__prev-link">All games</a> &lt; Carnegie</span>
+    </div>
+    <section class="product">
+      <div class="product-primary-container">
+        <div class="product__img">
+          <div class="img__preview">
+            <img src="res/carnegie-front-detail.jpeg" alt="product image preview" >
+          </div>
+          <div class="img__thumbnail">
+            <img src="res/carnegie-front-detail.jpeg" alt="product image preview: front side of the box" data-selected="true">
+            <img src="res/cartographer-insider-detail.jpeg" alt="product image preview: components/tools inside" data-selected="false">
+            <img src="res/carnegie-back-detail.png" alt="product image preview: back side of the box" data-selected="false">
+          </div>
+        </div>
+        <div class="product-information-container">
+          <div class="product__meta">
+            <h2 class="meta__name">Carnegie</h2>
+            <h2 class="meta__price">$45.29</h2>
+          </div>
+          <div class="product__description">
+            <h3 class="description__title">Description</h3>
+            <p class="description__content">In Carnegie: During the game you will recruit and manage employees, expand your business, invest in real estate, produce and sell goods, and create transport chains across the United States; The game takes place over 20 rounds; players will each have one turn per round. On each turn, the active player will choose one of four actions, which the other players may follow. The goal of the game is to build the most prestigious company, as symbolized by victory points.</p>
+          </div>
+          <div class="product__order-section">
+            <div class="order-section__quantity">
+              <button type="button" class="quantity__decrement-btn">-</button>
+              <p class="quantity__amount">1</p>
+              <button type="button" class="quantity__increment-btn">+</button>
+            </div>
+            <a href="shoppinp-cart.html" role="button" class="order-section__add-product-btn">Add to cart</a>
+          </div>
+        </div>
       </div>
-      <h2>Payment Details:</h2>
-      <form action="" method="POST">
-        <div class="payment__card-number">
-          <label for="card-number">Credit Card Number *</label>
-          <input type="text" id="card-number" name="card-number" autocomplete="nope" placeholder="0000000000000000" required="required" maxlength="16" pattern="[0-9]+">
+      <div class="product__additional-info">
+        <div class="additional-info__selection">
+          <h2 class="selection__content" data-selected="true" data-content="product-detail">PRODUCT DETAIL</h2>
+          <h2 class="selection__content" data-selected="false" data-content="delivery">DELIVERY</h2>
         </div>
-        <div class="payment__card-holder">
-          <label for="card-holder">Credit Card Holder Name *</label>
-          <input type="text" id="care-holder" name="card-holder" autocomplete="nope" required="required">
-        </div>
-        <div class="payment__card-meta">
-          <div class="card-meta__expiry">
-            <label for="card-expiry">Valid Thru *</label>
-            <input type="text" id="card-expiry" name="card-expiry" autocomplete="nope" placeholder="MM/YY" required="required" maxlength="5" pattern="[0-9]+">
+        <div class="additional-info__content">
+          <div class="content__text" data-display="true" data-content="product-detail">
+            <h3>Story:</h3>
+            <p>Andrew Carnegie was a major player in the United States' steel industry. He was not just one of the richest men in the world; he was also a philanthropist and supporter of social causes. Who can become his equal?</p>
+            <br>
+            <p>Carnegie is an elegant and interactive management game. Players compete to grow their companies through shrewd investments in real estate, industry, and transportation. Through careful observation of their opponents' choices, players will find ways to take sole advantage of lucrative opportunities. In the end, the most successful player will be victorious - but success is judged by more than one's wealth. To win, players must also contribute to the country's greatness through their deeds and generosity.</p>
+            <br>
+            <h3>Game Contents:</h3>
+            <p>1 Game Box, 1 Game Board, 2 Timeline Frames, 8 Timeline Tiles, 4 wooden Action Markers, 4 Action Choice Tiles, 64 Department Tiles, 1 Department Board, 4 Company Boards, 16 Project Tabs, 4 Donation Tiles, 60 Employee Figurines, 116 Player Disks, 4 custom VP Markers, 4 Player Aids.</p>
           </div>
-          <div class="card-meta__security-code">
-            <label for="security-code">CVV Code *</label>
-            <input type="text" id="security-code" name="security-code" autocomplete="nope" placeholder="000" required="required" maxlength="3" pattern="[0-9]+">
+          <div class="content__text" data-display="false" data-content="delivery">
+            <h3>Australia Delivery:</h3>
+            <p><em>We charge a flat rate of $5.90 AUD per shipment. Orders are shipped by air via Australia Post straight to your door!</em></p>
+            <br>
+            <h3>DeliveryTimes:</h3>
+            <p>The Board Gamer orders ship from our fulfillment partner Mighty Ape. Their warehouse is based in New Zealand with daily flights across the Tasman with Australia Post.</p>
+            <br>
+            <p>As a result of courier delays in Australia due to Covid-19, the current standard delivery times for In Stock products using Australia Post are as follows:</p>
+            <br>
+            <p>QLD 3-5 business days, 
+            NSW 3-6 business days,
+            ACT 4-6 business days,
+            VIC 5-9 business days,
+            SA 6-9 business days,
+            TAS, WA 7-9 business days,
+            NT 7-10 business days</p>
           </div>
         </div>
-        <a href="" role="button" class="payment__paypal-btn" aria-label="PayPal Alternative Payment Method">
-          <img src="res/paypal-icon.png" alt="PayPal">
-        </a>
-        <a href="payment-complete.html" role="button" class="payment__submit-btn">PROCEED & PLACE ORDER</a>
-      </form>
+      </div>
+      <div class="product__social-media">
+        <span>SHARE:</span>
+        <span class="social-media__link"><a href="" target="_blank"><i class="fab fa-instagram-square"></i></i></a></span>
+        <span class="social-media__link"><a href="" target="_blank"><i class="fab fa-facebook-square"></i></i></a></span>
+        <span class="social-media__link"><a href="" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+      </div>
     </section>
   </main>
   <footer>
@@ -184,6 +229,7 @@
   <script src="javascript/nav-bar-control.js" defer></script>
   <script src="javascript/footer-control.js" defer></script>
   <script src="javascript/product-preview-selection.js" defer></script>
-  <script src="javascript/payment-validation.js"></script>
+  <script src="javascript/product-content-selection.js" defer></script>
+  <script src="javascript/product-quantity-control.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+.bread-crumb__prev-link {
+  color: var(--text-pri-clr);
+}
+
+.product-category__options div {
+  background-color: var(--category-bg-clr);
+}
+
+.product-category__options div:hover {
+  background-color: var(--category-bg-clr--hover);
+}
+
+.option__item {
+  background-color: var(--product-component-bg-clr);
+}
+
+.option__item p:nth-of-type(2) {
+  color: var(--text-sec-clr);
+}
+
+.option__item button {
+  background-color: var(--add-cart-bg-clr);
+}
+
+.option__item button:hover {
+  background-color: var(--add-cart-bg-clr--hover);
+}
+
+.load-pages__btn {
+  background-color: var(--load-product-btn-bg-clr);
+}
+
+.load-pages__btn:hover {
+  background-color: var(--load-product-btn-bg-clr--hover);
+}

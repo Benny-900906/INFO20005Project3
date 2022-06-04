@@ -1,15 +1,4 @@
-@import url(root.css);
-/* import header css */
-@import url(header.css);
-/* import footer css */
-@import url(footer.css);
-@import url(product-listing-layout.css);
-@import url(product-listing-typography.css);
-@import url(product-listing-color.css);
-
-/* Whole CSS below */
-
-/* body {
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,18 +12,9 @@ main {
   width: 100%;
 }
 
-.bread-crumb span, .bread-crumb__prev-link {
-  font-size: var(--bread-crumb-font-size--sm); 
-}
-
 .bread-crumb {
   align-self: flex-start;
   margin-left: 1rem;
-}
-
-.bread-crumb__prev-link {
-  text-decoration: underline;
-  color: var(--text-pri-clr);
 }
 
 section {
@@ -71,7 +51,6 @@ section {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--category-bg-clr);
   border-radius: 15px;
   text-align: center;
   padding-block: 0.625rem;
@@ -80,7 +59,6 @@ section {
 
 .product-category__options div:hover {
   transform: scale(1.02);
-  background-color: var(--category-bg-clr--hover);
 }
 
 .option__board-game img {
@@ -141,7 +119,6 @@ fieldset {
   padding: 0.5rem;
   padding-top: 1.5rem;
   border-radius: 1rem;
-  background-color: var(--product-component-bg-clr);
 }
 
 .option__item a  {
@@ -160,23 +137,12 @@ fieldset {
 
 .option__item p {
   margin-block: 0.25rem;
-  font-weight: bold;
-}
-
-.option__item p:nth-of-type(2) {
-  color: var(--text-sec-clr);
 }
 
 .option__item button {
   padding: 0.5rem 1rem;
   border-radius: 0.8rem;
   margin-top: 0.5rem;
-  background-color: var(--add-cart-bg-clr);
-  font-size: var(--content-font-size--sm);
-}
-
-.option__item button:hover {
-  background-color: var(--add-cart-bg-clr--hover);
 }
 
 .product__load-pages {
@@ -189,19 +155,6 @@ fieldset {
   padding-block: 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid var(--bg-pri-clr);
-  background-color: var(--load-product-btn-bg-clr);
-}
-
-.load-pages__btn:hover {
-  background-color: var(--load-product-btn-bg-clr--hover);
-}
-
-h2 {
-  font-size: var(--h2-font-size--sm);
-}
-
-p, button, a, select {
-  font-size: var(--content-font-size--sm);
 }
 
 @media (min-width: 768px) {
@@ -211,10 +164,6 @@ p, button, a, select {
   
   section {
     width: 95%;
-  }
-
-  .bread-crumb span, .bread-crumb__prev-link {
-    font-size: var(--bread-crumb-font-size--md); 
   }
 
   .product {
@@ -240,17 +189,13 @@ p, button, a, select {
   .load-pages__btn {
     padding-block: 1rem;
   }
-
-  h2 {
-    font-size: var(--h2-font-size--md);
-  }
-  
-  p, button, a, select {
-    font-size: var(--content-font-size--md);
-  }
 }
 
 @media (min-width: 1020px) {
+  main {
+    max-width: 936px;
+  }
+
   .product__options {
     gap: 0;
   }
@@ -260,4 +205,4 @@ p, button, a, select {
     max-width: none;
     padding-block: 2rem;
   }
-} */
+}

@@ -1,0 +1,57 @@
+.control__slide-btn {
+  background-color: var(--slide-control-bg-clr);
+}
+
+.control__slide-btn[data-selected="true"] {
+  background-color: var(--slide-control-bg-clr--selected);
+}
+
+.product-category__options div {
+  background-color: var(--category-bg-clr);
+}
+
+.product-category__options div:hover {
+  background-color: var(--category-bg-clr--hover);
+}
+
+.option__item {
+  background-color: var(--product-component-bg-clr);
+}
+
+.option__item p:nth-of-type(2) {
+  color: var(--text-sec-clr);
+}
+
+.option__item button {
+  background-color: var(--add-cart-bg-clr);
+}
+
+.option__item button:hover {
+  background-color: var(--add-cart-bg-clr--hover);
+}
+
+.view-all-btn {
+  background-color: var(--proceed-btn-bg-clr);
+  color: var(--text-qua-clr);
+}
+
+.view-all-btn:hover {
+  background-color: var(--proceed-btn-bg-clr--hover);
+}
+
+.customer-review__preview {
+  background-color: var(--review-bg-clr);
+}
+
+.preview__link a {
+  color: var(--text-ter-clr);
+}
+
+.input__btn button {
+  background-color: var(--proceed-btn-bg-clr);
+  color: var(--text-qua-clr);
+}
+
+.input__btn button:hover {
+  background-color: var(--proceed-btn-bg-clr--hover);
+}

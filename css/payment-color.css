@@ -1,0 +1,21 @@
+.payment-error {
+  background-color: var(--input-error-bg-clr);
+  color: var(--err-msg-clr);
+}
+
+.payment__paypal-btn {
+  background-color: var(--paypal-btn-bg-clr);
+}
+
+.payment__paypal-btn:hover {
+  background-color: var(--paypal-btn-bg-clr--hover);
+}
+
+.payment__submit-btn {
+  color: var(--text-qua-clr);
+  background-color: var(--place-order-btn-bg-clr);/* change later */
+}
+
+.payment__submit-btn:hover {
+  background-color: var(--place-order-btn-bg-clr--hover);
+}

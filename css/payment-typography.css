@@ -1,0 +1,23 @@
+form input {
+  line-height: 1.8;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--h2-font-size--sm);
+}
+
+span, input, label, button, a {
+  font-size: var(--content-font-size--sm);
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: var(--h2-font-size--md);
+  }
+  
+  span, input, label, button, a {
+    font-size: var(--content-font-size--md);
+  }
+}

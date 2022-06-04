@@ -1,15 +1,3 @@
-@import url(root.css);
-/* import header css */
-@import url(header.css);
-/* import footer css */
-@import url(footer.css);
-@import url(payment-layout.css);
-@import url(payment-typography.css);
-@import url(payment-color.css);
-
-/* Whole CSS below */
-
-/*  
 body {
   display: flex;
   flex-direction: column;
@@ -39,9 +27,7 @@ input {
   width: 100%;
   justify-content: flex-start;
   align-items: center;
-  background-color: var(--input-error-bg-clr);
   padding: 1rem 1rem;
-  color: var(--err-msg-clr);
   display: none;
 }
 
@@ -58,12 +44,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-form input {
-  line-height: 1.8;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
 }
 
 .payment__card-number, .payment__card-holder, .card-meta__expiry, .card-meta__security-code {
@@ -84,13 +64,8 @@ form input {
 
 .payment__paypal-btn {
   text-align: center;
-  background-color: var(--paypal-btn-bg-clr);
   border-radius: 0.5rem;
   border: none;
-}
-
-.payment__paypal-btn:hover {
-  background-color: var(--paypal-btn-bg-clr--hover);
 }
 
 .payment__paypal-btn img {
@@ -100,35 +75,13 @@ form input {
 .payment__submit-btn {
   padding: 0.7rem 0.5rem;
   text-align: center;
-  color: var(--text-qua-clr);
-  background-color: var(--place-order-btn-bg-clr);
   border-radius: 0.5rem;
   border: none;
-}
-
-.payment__submit-btn:hover {
-  background-color: var(--place-order-btn-bg-clr--hover);
-}
-
-h2 {
-  font-size: var(--h2-font-size--sm);
-}
-
-span, input, label, button, a {
-  font-size: var(--content-font-size--sm);
 }
 
 @media (min-width: 768px) {
   .payment {
     width: 65%;
-  }
-
-  h2 {
-    font-size: var(--h2-font-size--md);
-  }
-  
-  span, input, label, button, a {
-    font-size: var(--content-font-size--md);
   }
 
   .payment__paypal-btn img {
@@ -139,5 +92,6 @@ span, input, label, button, a {
 @media (min-width: 1020px) {
   .payment {
     width: 55%;
+    max-width: 792px;
   }
-} */
+}

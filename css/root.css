@@ -1,44 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-/* import header css */
-@import url(header.css);
-/* import footer css */
-@import url(footer.css);
-
-@font-face {
-  font-family: Hobo Std;
-  src: url("./res/HoboStd.otf");
-}
-
 :root {
-  --logo-font-family: Hobo St, sans-serif;
-  --heading-font-family: 'Poppins', sans-serif;
-  --content-font-family:  var(--heading-font-family);
-  --text-highlight-clr: #DA0101;
-  --text-pri-clr: #3b3a3a;
-  --text-sec-clr: #91bd60;
-  --text-ter-clr: #ffffff;
-  --bg-pri-clr: #292929; 
-  --bg-sec-clr: #bcef82;
-  --bg-ter-clr: #fff8e0;
-  --bg-qua-clr: #ffcc30;
-  --bg-qui-clr: #2c9cdb;
-  --bg-sen-clr: #e9e9e9;
-  --h1-font-size--lg: 2.625rem; /* 64px */
-  --h1-font-size--md: 2.25rem; /* 36px */
-  --h1-font-size--sm: 1.5rem; /* 24px */
-  --h2-font-size--lg: 2rem; /* 32px */
-  --h2-font-size--md: 1.75rem; /* 28px */
-  --h2-font-size--sm: 1.5rem; /* 24px */
-  --h3-font-size--lg: 1.25rem; /* 20px */
-  --h3-font-size--md: 1.125rem; /* 18px */
-  --h3-font-size--sm: 1rem /* 16px */
-  --content-font-size--lg: 1rem; /* 16px */
+  /* FontStyle */
+  --title-font-family: 'Rum Raisin', sans-serif;
+  --content-font-family: 'Poppins', sans-serif;
+
+  /* TextSize */
+  --logo-title-size--md: 1.56rem; /* 25px */
+  --logo-title-size--sm: 1.38rem; /* 22px */
+  --h2-font-size--md: 1rem; /* 16px */
+  --h2-font-size--sm: 0.75rem; /* 12px */
   --content-font-size--md: 0.875rem; /* 14px */
-  --content-font-size--sm: 0.6rem; /* 14px */
-  --break-point--lg: 996px;
-  --break-point--md: 720px;
+  --content-font-size--sm: 0.625rem; /* 10px */
+  --bread-crumb-font-size--sm: 0.625rem; /* 10px */
+  --bread-crumb-font-size--md: 0.75rem; /* 12px */
+  --sub-nav-title-font-size--md: 0.875rem; /* 14px */
+  --sub-nav-title-font-size--sm: 0.75rem; /* 12px */
+  --sub-nav-link-font-size--md: 0.75rem; /* 12px */
+  --sub-nav-link-font-size--sm: 0.625rem; /* 10px */
+  --social-media-font-size--sm: 1.25rem; /* 20px */
+  --social-media-font-size--md: 1.75rem; /* 28px */
+  --icon-font-size: 1rem; /* 16px */
+  --nav-menu-font-size: 0.875rem; /* 14px */
+  
+  /* TextColor */
+  --text-pri-clr: #91bd60;
+  --text-sec-clr: #da0101;
+  --text-ter-clr: #3b3a3a;
+  --text-qua-clr: #ffffff;
+  --err-msg-clr: #e93d34;
+
+  /* BackgroundColor */
+  --header-bg-clr: #292929;
+  --footer-bg-clr: var(--header-bg-clr);
+
+  --nav-bg-clr--sm: #ffffff;
+  --nav-bg-clr--md: transparent;
+
+  --search-bg-clr: #ffffff;
+
+  --nav-list-bg-clr: var(--nav-bg-clr--sm);
+  --nav-cover-bg-clr: var(--header-bg-clr);
+
+  --subscribe-email-bg-clr: #7d7d7d;
+  --subscribe-btn-bg-clr: transparent;
+  --subscribe-btn-bg-clr--hover: var(--subscribe-email-bg-clr);
+  
+  --category-bg-clr: #e2f8cb;
+  --category-bg-clr--hover: #c8f795;
+
+  --slide-control-bg-clr: #292929;
+  --slide-control-bg-clr--selected: #ffffff;
+
+  --load-product-btn-bg-clr: var(--category-bg-clr);
+  --load-product-btn-bg-clr--hover: var(--category-bg-clr--hover);
+
+  --product-component-bg-clr: #fff8e0;
+  --subtotal-review-bg-clr: var(--product-component-bg-clr);
+
+  --add-cart-bg-clr: #ffcc30;
+  --add-cart-bg-clr--hover: #f9c015;
+
+  --continue-shopping-btn-bg-clr: var(--add-cart-bg-clr);
+  --continue-shopping-btn-bg-clr--hover: var(--add-cart-bg-clr--hover);
+
+  --guest-btn-bg-clr: var(--add-cart-bg-clr);
+  --guest-btn-bg-clr--hover: var(--add-cart-bg-clr--hover);
+
+  --paypal-btn-bg-clr: var(--add-cart-bg-clr);
+  --paypal-btn-bg-clr--hover: var(--add-cart-bg-clr--hover);
+
+  --credential-verify-btn-bg-clr: #91bd60;
+  --credential-verify-btn-bg-clr--hover: #78ae3a;
+
+  --proceed-btn-bg-clr: #2c9cdb;
+  --proceed-btn-bg-clr--hover: #0d8ed9;
+
+  --place-order-btn-bg-clr: #25ae60;
+  --place-order-btn-bg-clr--hover: #1e8a4d;
+
+  --plain-bg-clr: #efefef;
+  --review-bg-clr: var(--plain-bg-clr);
+
+  --quantity-btn-bg-clr: var(--plain-bg-clr);
+  --quantity-btn-bg-clr--hover: #d9d9d9;
+
+  --auth-header-bg-clr: var(--plain-bg-clr);
+  --auth-header-bg-clr--selected: #ffffff;
+  --input-error-bg-clr: #f2dedd;
+
+  --shipping-method-bg-clr: var(--plain-bg-clr);
+
+  --save-btn-bg-clr: #f2994b;
+  --save-btn-bg-clr--hover: #f1872b;
 }
 
+/* General Style */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -47,7 +102,11 @@
   text-decoration: none;
 }
 
-input, select{
+html {
+  font-family: var(--content-font-family);
+}
+
+input, select {
   outline: none;
 }
 
@@ -56,6 +115,6 @@ button, a , select {
 }
 
 ::placeholder {
-  color: var(--text-pri-clr);
+  color: var(--text-ter-clr);
   opacity: 0.5;
 }

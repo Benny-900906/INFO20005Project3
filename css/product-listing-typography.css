@@ -1,0 +1,37 @@
+.bread-crumb span, .bread-crumb__prev-link {
+  font-size: var(--bread-crumb-font-size--sm); 
+}
+
+.bread-crumb__prev-link {
+  text-decoration: underline;
+}
+
+.option__item p {
+  font-weight: bold;
+}
+
+.option__item button {
+  font-size: var(--content-font-size--sm);
+}
+
+h2 {
+  font-size: var(--h2-font-size--sm);
+}
+
+p, button, a, select {
+  font-size: var(--content-font-size--sm);
+}
+
+@media (min-width: 768px) {
+  .bread-crumb span, .bread-crumb__prev-link {
+    font-size: var(--bread-crumb-font-size--md); 
+  }
+
+  h2 {
+    font-size: var(--h2-font-size--md);
+  }
+  
+  p, button, a, select {
+    font-size: var(--content-font-size--md);
+  }
+}

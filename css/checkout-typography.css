@@ -1,0 +1,21 @@
+.order-review__wrapup label, .wrapup__total-price h3, .wrapup__total-price span, .shipping-fieldset legend {
+  font-weight: bold;
+}
+
+label, span, h3, input, select, button, p, a {
+  font-size: var(--content-font-size--sm);
+}
+
+h2, legend {
+  font-size: var(--h2-font-size--sm);
+}
+
+@media (min-width: 768px) {
+  label, span, h3, input, select, button, p, a {
+    font-size: var(--content-font-size--md);
+  }
+  
+  h2, legend {
+    font-size: var(--h2-font-size--md);
+  }
+}

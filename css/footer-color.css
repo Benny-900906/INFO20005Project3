@@ -1,0 +1,33 @@
+footer {
+  background-color: var(--footer-bg-clr);
+  color: var(--text-qua-clr);
+}
+
+.content__email {
+  color: var(--text-qua-clr);
+  background-color: var(--subscribe-email-bg-clr);
+}
+
+.content__email::placeholder {
+  color: var(--text-qua-clr);
+  opacity: 0.5;
+}
+
+.content__btn {
+  color: inherit;
+  border-color: #ffffff;
+  background-color: var(--subscribe-btn-bg-clr);
+}
+
+.content__btn:hover {
+  background-color: var(--subscribe-btn-bg-clr--hover);
+}
+
+.drop-down-links__option {
+  color: var(--text-qua-clr);
+}
+
+.drop-down-links__option:hover {
+  color: var(--text-pri-clr)
+}
+

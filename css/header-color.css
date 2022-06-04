@@ -1,0 +1,83 @@
+header {
+  background-color: var(--header-bg-clr);
+}
+
+.logo__title {
+  color: var(--text-pri-clr);
+}
+
+.header-section__search {
+  background-color: var(--search-bg-clr);
+}
+
+.tools__functions a {
+  color: var(--text-qua-clr);
+}
+
+.nav-bar__inner-btn {
+  background-color: var(--nav-bg-clr--sm);
+}
+
+.nav-bar__inner-btn::before, .nav-bar__inner-btn::after {
+  background-color: var(--nav-bg-clr--sm);
+}
+
+.nav-bar__cover {
+  background-color: var(--header-bg-clr);
+  opacity: 0.4;
+}
+
+.nav-bar__sub-nav {
+  background-color: var(--nav-bg-clr--sm);
+}
+
+.sub-nav__menu h2 {
+  color: var(--text-pri-clr);
+}
+
+.sub-nav__menu {
+  background-color: var(--header-bg-clr);
+}
+
+.exit-menu-inner-btn::before, .exit-menu-inner-btn::after {
+  background-color: var(--nav-bg-clr--sm);
+}
+
+.sub-nav__item span {
+  color: var(--text-ter-clr);
+}
+
+.sub-nav__item-name:hover, .sub-nav__item-name:hover span {
+  color: var(--text-pri-clr);
+}
+
+.sub-nav__item-list a {
+  color: var(--text-ter-clr);
+}
+
+.sub-nav__item-list a:hover {
+  color: var(--text-pri-clr);
+}
+
+
+@media (min-width: 768px) {
+  .search__icon {
+    color: var(--text-ter-clr);
+  }
+
+  .nav-bar__sub-nav {
+    background-color: var(--nav-bg-clr--md);
+  }
+
+  .sub-nav__item span {
+    color: var(--text-qua-clr);
+  }
+
+  .sub-nav__item-list {
+    background-color: var(--nav-list-bg-clr);
+  }
+  
+  .sub-nav__item-list a {
+    color: var(--text-ter-clr);
+  }
+}

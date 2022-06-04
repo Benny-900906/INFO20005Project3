@@ -1,0 +1,17 @@
+.continue-shop-btn {
+  background-color: var(--continue-shopping-btn-bg-clr);
+  color: var(--text-ter-clr);
+}
+
+.continue-shop-btn:hover {
+  background-color: var(--continue-shopping-btn-bg-clr--hover);
+}
+
+.create-account-btn {
+  background-color: var(--proceed-btn-bg-clr);
+  color: var(--text-qua-clr);
+}
+
+.create-account-btn:hover {
+  background-color: var(--proceed-btn-bg-clr--hover);
+}

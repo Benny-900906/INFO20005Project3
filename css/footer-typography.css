@@ -1,0 +1,26 @@
+.content__email {
+  line-height: 1.4;
+}
+
+.content__btn {
+  line-height: 1.4;
+}
+
+.category__drop-down-toggle h2 {
+  font-size: var(--h2-font-size--sm);
+}
+
+.drop-down-links__option, .content__email, .content__btn, .subscription p {
+  font-size: var(--content-font-size--sm);
+}
+
+@media (min-width: 768px) {
+
+  .category__drop-down-toggle h2 {
+    font-size: var(--h2-font-size--md);
+  }
+
+  .content__email, .content__btn, .subscription p, .drop-down-links__option {
+    font-size: var(--content-font-size--md);
+  }
+}

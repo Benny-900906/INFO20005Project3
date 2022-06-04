@@ -1,0 +1,38 @@
+.option__item p {
+  font-weight: bold;
+}
+
+.option__item button {
+  font-size: var(--content-font-size--sm);
+}
+
+.preview__link a {
+  text-decoration: underline;
+}
+
+.preview__link a:hover {
+  font-weight: bold;
+}
+
+.content__textarea {
+  line-height: 1.8;
+  line-break: auto;
+}
+
+h2 {
+  font-size: var(--h2-font-size--sm);
+}
+
+p, button, h3, textarea, a {
+  font-size: var(--content-font-size--sm);
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: var(--h2-font-size--md);
+  }
+  
+  p, button, h3, textarea, a {
+    font-size: var(--content-font-size--md);
+  }
+}

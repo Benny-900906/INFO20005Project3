@@ -1,0 +1,116 @@
+.order-summary__product span, .quantity__reset {
+  color: var(--text-ter-clr);
+}
+
+.quantity__decrement-btn, .quantity__increment-btn {
+  background-color: var(--quantity-btn-bg-clr);
+}
+
+.quantity__decrement-btn:hover:hover, .quantity__increment-btn:hover {
+  background-color: var(--quantity-btn-bg-clr--hover);
+}
+
+.order-summary__save-btn {
+  background-color: var(--save-btn-bg-clr);
+}
+
+.order-summary__save-btn:hover {
+  background-color: var(--save-btn-bg-clr--hover);
+}
+
+.subtotal__price {
+  color: var(--text-sec-clr);
+}
+
+.order-proceed__continue-btn {
+  background-color: var(--continue-shopping-btn-bg-clr);
+  color: var(--text-ter-clr);
+}
+
+.order-proceed__continue-btn:hover {
+  background-color: var(--continue-shopping-btn-bg-clr--hover);
+}
+
+.order-proceed__checkout-btn {
+  background-color: var(--proceed-btn-bg-clr);
+  color: var(--text-qua-clr);
+}
+
+.order-proceed__checkout-btn:hover {
+  background-color: var(--proceed-btn-bg-clr--hover);
+}
+
+.dialog-cover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.auth-header {
+  background-color: var(--auth-header-bg-clr);
+}
+
+.auth-header__selection {
+  color: var(--text-pri-clr);
+}
+
+.auth-header__selected {
+  background-color: var(--auth-header-bg-clr--selected);
+  color: var(--text-ter-clr);
+}
+
+.auth-error {
+  background-color: var(--input-error-bg-clr);
+}
+
+.error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+  color: var(--err-msg-clr);
+}
+
+.separator hr {
+  border-color: var(--text-pri-clr);
+}
+
+.credential__verify {
+  background-color:var(--credential-verify-btn-bg-clr);
+}
+
+.credential__verify:hover {
+  background-color: var(--credential-verify-btn-bg-clr--hover);
+}
+
+.guest-btn {
+  background-color: var(--guest-btn-bg-clr);
+}
+
+.guest-btn:hover {
+  background-color: var(--guest-btn-bg-clr--hover);
+}
+
+.recover__password a {
+  color: var(--text-ter-clr);
+}
+
+.credential__verify {
+  color: var(--text-qua-clr);
+}
+
+.guest-btn {
+  color: var(--text-ter-clr);
+}
+
+.item__meta span {
+  color: var(--text-sec-clr);
+}
+
+.product-list__add-btn {
+  background-color: var(--add-cart-bg-clr);
+} 
+
+.product-list__add-btn:hover {
+  background-color: var(--add-cart-bg-clr--hover);
+}
+
+@media (min-width: 768px) {
+  .order-recommendation__product-list li {
+    background-color: var(--product-component-bg-clr);
+  }
+}

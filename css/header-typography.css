@@ -1,0 +1,38 @@
+.logo__title {
+  font-family: var(--title-font-family);
+  font-size: var(--logo-title-size--sm);
+}
+
+.search__input {
+  letter-spacing: 1px;
+}
+
+.tools__functions a {
+  font-size: var(--icon-font-size);
+}
+
+.sub-nav__menu h2 {
+  font-size: var(--nav-menu-font-size);
+}
+
+.sub-nav__item-name, .sub-nav__item span {
+  font-size: var(--sub-nav-title-font-size--sm);
+}
+
+.sub-nav__item-list a {
+  font-size: var(--sub-nav-link-font-size--sm);
+}
+
+@media (min-width: 768px) {
+  .logo__title {
+    font-size: var(--logo-title-size--md);
+  }
+
+  .sub-nav__item-name, .sub-nav__item span  {
+    font-size: var(--sub-nav-title-font-size--md);
+  }
+  
+  .sub-nav__item-list a {
+    font-size: var(--sub-nav-link-font-size--md);
+  }
+}

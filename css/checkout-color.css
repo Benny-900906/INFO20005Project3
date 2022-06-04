@@ -1,0 +1,25 @@
+.billing-error {
+  background-color: var(--input-error-bg-clr);
+  color: var(--err-msg-clr);
+}
+
+.shipping-delivery__selected {
+  background-color: var(--shipping-method-bg-clr);
+}
+
+.order-review {
+  background-color: var(--subtotal-review-bg-clr);
+}
+
+.wrapup__total-price span {
+  color: var(--text-sec-clr);
+}
+
+.proceed-payment-btn {
+  color: var(--text-qua-clr);
+  background-color: var(--proceed-btn-bg-clr);
+}
+
+.proceed-payment-btn:hover {
+  background-color: var(--proceed-btn-bg-clr--hover);
+}

@@ -1,0 +1,66 @@
+.quantity__reset:hover {
+  font-weight: bold;
+}
+
+.quantity__reset {
+  text-decoration: underline;
+}
+
+.product__total span, .order-finale__subtotal h3, .auth-header__selection {
+  font-weight: bold;
+}
+
+.auth-header__selection {
+  font-family: var(--title-font-family);
+}
+
+.error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+  font-size: var(--content-font-size--sm);
+}
+
+.auth-header__selection h2 {
+  font-size: 16px;
+}
+
+.auth-input__title span, .credential__input input, .recover__password a, .credential__verify, .guest-btn {
+  font-size: var(--content-font-size--sm);
+}
+
+.recover__password a {
+  text-decoration: underline;
+}
+
+.item__meta h3, .item__meta span {
+  font-weight: bold;
+}
+
+.product__detail span {
+  font-weight: bold;
+}
+
+.order-summary__header h2, .order-finale__total, .order-recommendation h2 {
+  font-size: var(--h2-font-size--sm);
+}
+
+.order-summary__product span, .quantity__control button, .quantity__control span, .quantity__reset, .order-summary__save-btn, .order-requirement__msg, .order-requirement__textarea, .order-finale__subtotal h3, .order-proceed a, .order-proceed button, .item__meta h3, .item__meta span, .product-list__add-btn {
+  font-size: var(--content-font-size--sm);
+}
+
+
+@media (min-width: 768px) {
+  .order-summary__header h2, .order-finale__total, .order-recommendation h2 {
+    font-size: var(--h2-font-size--md);
+  }
+
+  .order-summary__product span, .quantity__control button, .quantity__control span, .quantity__reset, .order-summary__save-btn, .order-requirement__msg, .order-requirement__textarea, .order-finale__subtotal h3, .order-proceed a, .order-proceed button, .item__meta h3, .item__meta span {
+    font-size: var(--content-font-size--md);
+  }
+
+  .error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+    font-size: var(--content-font-size--md);
+  }
+  
+  .auth-input__title span, .credential__input input, .recover__password a, .credential__verify, .guest-btn {
+    font-size: var(--content-font-size--md);
+  }
+}
