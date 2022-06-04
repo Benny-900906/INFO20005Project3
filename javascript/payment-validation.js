@@ -2,11 +2,19 @@
 on the payment page */
 
 const cardNumInput = document.querySelector("#card-number");
+const cardHolderInput = document.querySelector("#card-holder");
 const cardExpiryInput = document.querySelector("#card-expiry");
 const cardCvvInput = document.querySelector("#security-code");
 const paymentBtn = document.querySelector(".payment__submit-btn");
 const requiredInputs = document.querySelectorAll("input[required='required']");
 const paymentError = document.querySelector(".payment-error");
+const errorMsg = document.querySelector(".payment-error span");
+
+/* constants */
+const CREDIT_CARD_NUMBER_DIGITS = 16;
+const CVV_CODE_DIGITS = 3;
+const EXPIRY_DATE_FORMAT = /\d{2}\/\d{2}/g;
+const INVALID_NAME_INPUT = /[\W\d]+/g;
 
 const concatInput = (inputType, targetIndex) => {
   inputType.value = inputType.value.substring(0, targetIndex);
@@ -37,12 +45,33 @@ cardCvvInput.addEventListener("input", function(e) {
   preventInvalidInput(e, this);
 })
 
-/* checks if all the required inputs are filled in */
+/* checks if all the required inputs are filled in. also checks if the inputs are valid and reasonable */
 paymentBtn.addEventListener("click", (e) => {
-  requiredInputs.forEach((input) => {
-    if (input.value.length === 0) {
-      paymentError.classList.add("payment-error--display");
-      e.preventDefault();
-    }
-  });
+  let message = [];
+  /* checks if credit card input has 16 digits */
+  if (cardNumInput.value.length < CREDIT_CARD_NUMBER_DIGITS) {
+    message.push("A valid credit card number should contain 16 digits.");
+  } 
+  /* checks if card holder section is filled in */
+  if (cardHolderInput.value.length === 0) {
+    message.push("Card Holder Name is a required field.");
+  }
+  /* checks if the card holder name is vaid, which it should not contain non-alpha characters */
+  if (cardHolderInput.value.match(INVALID_NAME_INPUT)) {
+    message.push("Please enter a valid card holder name.");
+  }
+  /* checks if the expiry date is in the given format MM/YY */
+  if (!cardExpiryInput.value.match(EXPIRY_DATE_FORMAT)) {
+    message.push("Please enter in a valid card expiration date format.");
+  }
+  /* checks if the cvv code input has 3 digits */
+  if (cardCvvInput.value.length < CVV_CODE_DIGITS) {
+    message.push("A valid credit card CVV should contain 3 digits.");
+  }
+  /* display the error messages if and only if there is invalid input or empty input in required fields, otherwise keep proceeding */
+  if (message.length > 0) {
+    errorMsg.innerText = message.join("\n");
+    paymentError.classList.add("payment-error--display");
+    e.preventDefault();
+  }
 })

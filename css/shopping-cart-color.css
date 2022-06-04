@@ -61,7 +61,7 @@
   background-color: var(--input-error-bg-clr);
 }
 
-.error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+.auth-error span {
   color: var(--err-msg-clr);
 }
 

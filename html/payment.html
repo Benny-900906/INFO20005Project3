@@ -95,7 +95,7 @@
   <main>
     <section class="payment">
       <div class="payment-error">
-        <span>Please fill out all the <strong>required fields </strong> below</span>
+        <span></span>
       </div>
       <h2>Payment Details:</h2>
       <form action="" method="POST">
@@ -105,7 +105,7 @@
         </div>
         <div class="payment__card-holder">
           <label for="card-holder">Credit Card Holder Name *</label>
-          <input type="text" id="care-holder" name="card-holder" autocomplete="nope" required="required">
+          <input type="text" id="card-holder" name="card-holder" autocomplete="nope" required="required">
         </div>
         <div class="payment__card-meta">
           <div class="card-meta__expiry">
@@ -120,7 +120,7 @@
         <a href="" role="button" class="payment__paypal-btn" aria-label="PayPal Alternative Payment Method">
           <img src="../res/paypal-icon.png" alt="PayPal">
         </a>
-        <a href="./payment-complete.html" role="button" class="payment__submit-btn">PROCEED & PLACE ORDER</a>
+        <a href="./payment-complete.html" type="submit" role="button" class="payment__submit-btn">PROCEED & PLACE ORDER</a>
       </form>
     </section>
   </main>

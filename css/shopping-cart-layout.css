@@ -220,16 +220,6 @@ main {
   display: none;
 }
 
-.error__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
-  display: none;
-}
-
 .auth-error--display {
   display: block;
 }

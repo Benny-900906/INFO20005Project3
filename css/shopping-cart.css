@@ -285,13 +285,7 @@ main {
   display: none;
 }
 
-.error__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+.auth-error span {
   font-size: var(--content-font-size--sm);
   color: var(--err-msg-clr);
   display: none;
@@ -579,7 +573,7 @@ main {
     font-size: var(--content-font-size--md);
   }
 
-  .error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+  .auth-error span {
     font-size: var(--content-font-size--md);
   }
   

@@ -43,15 +43,15 @@ main {
 }
 
 .slider-img-1 {
-  background-image: url("https://www.board-game.co.uk/wp-content/uploads/2022/05/Bitoku.jpg");
+  background-image: url(../res/index-promotion-one.jpeg);
 }
 
 .slider-img-2 {
-  background-image: url("https://www.board-game.co.uk/wp-content/uploads/2022/05/Combined-Arms.jpg");
+  background-image: url(../res/index-promotion-two.jpeg);
 }
 
 .slider-img-3 {
-  background-image: url("https://www.board-game.co.uk/wp-content/uploads/2022/02/Outlet-Slider.jpg");
+  background-image: url(../res/index-promotion-three.jpeg);
 }
 
 .selected-slider-img {

@@ -14,7 +14,7 @@
   font-family: var(--title-font-family);
 }
 
-.error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+.auth-error span {
   font-size: var(--content-font-size--sm);
 }
 
@@ -56,7 +56,7 @@
     font-size: var(--content-font-size--md);
   }
 
-  .error__email, .error__password, .error__password-confirm, .error__password-inconsistent {
+  .auth-error span {
     font-size: var(--content-font-size--md);
   }
   
