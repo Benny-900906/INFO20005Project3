@@ -50,7 +50,7 @@ paymentBtn.addEventListener("click", (e) => {
   let message = [];
   /* checks if credit card input has 16 digits */
   if (cardNumInput.value.length < CREDIT_CARD_NUMBER_DIGITS) {
-    message.push("A valid credit card number should contain 16 digits.");
+    message.push("A valid Credit Card Number should contain 16 digits.");
   } 
   /* checks if card holder section is filled in */
   if (cardHolderInput.value.length === 0) {
@@ -66,7 +66,7 @@ paymentBtn.addEventListener("click", (e) => {
   }
   /* checks if the cvv code input has 3 digits */
   if (cardCvvInput.value.length < CVV_CODE_DIGITS) {
-    message.push("A valid credit card CVV should contain 3 digits.");
+    message.push("A valid Credit Card CVV should contain 3 digits.");
   }
   /* display the error messages if and only if there is invalid input or empty input in required fields, otherwise keep proceeding */
   if (message.length > 0) {
