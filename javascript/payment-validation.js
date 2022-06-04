@@ -14,7 +14,7 @@ const errorMsg = document.querySelector(".payment-error span");
 const CREDIT_CARD_NUMBER_DIGITS = 16;
 const CVV_CODE_DIGITS = 3;
 const EXPIRY_DATE_FORMAT = /\d{2}\/\d{2}/g;
-const INVALID_NAME_INPUT = /[\W\d]+/g;
+const FULL_NAME_FORMAT = /^[a-zA-Z ,.'-]+$/g;
 
 const concatInput = (inputType, targetIndex) => {
   inputType.value = inputType.value.substring(0, targetIndex);
@@ -57,7 +57,7 @@ paymentBtn.addEventListener("click", (e) => {
     message.push("Card Holder Name is a required field.");
   }
   /* checks if the card holder name is vaid, which it should not contain non-alpha characters */
-  if (cardHolderInput.value.match(INVALID_NAME_INPUT)) {
+  if (!cardHolderInput.value.match(FULL_NAME_FORMAT)) {
     message.push("Please enter a valid card holder name.");
   }
   /* checks if the expiry date is in the given format MM/YY */
