@@ -5,18 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spelshop</title>
-  <link rel="icon" sizes="32x32" href="res/favicon.ico?">
+  <link rel="icon" sizes="32x32" href="/res/favicon.ico?">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rum+Raisin&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="/css/product-detail.css">
   <script src="https://kit.fontawesome.com/964b9be802.js" crossorigin="anonymous"></script>
-</head> 
+</head>  
 <body>
   <header>
     <div class="header-section">
-      <a href="index.html" class="header-section__logo">
-        <img class="logo__img" src="res/spelshop-logo.png" alt="iconic spelshop character">
+      <a href="/index.html" class="header-section__logo">
+        <img class="logo__img" src="/res/spelshop-logo.png" alt="iconic spelshop character">
         <h1 class="logo__title">Spelshop</h1>
       </a>
       <div class="header-section__search">
@@ -93,35 +93,78 @@
     </nav>
   </header>
   <main>
-    <section class="payment">
-      <div class="payment-error">
-        <span>Please fill out all the <strong>required fields </strong> below</span>
+    <div class="bread-crumb">
+      <span><a href="/index.html" class="bread-crumb__prev-link">Home</a> &lt; <a href="product-listing.html" class="bread-crumb__prev-link">All games</a> &lt; Cartographers</span>
+    </div>
+    <section class="product">
+      <div class="product-primary-container">
+        <div class="product__img">
+          <div class="img__preview">
+            <img src="/res/cartographer-front-detail.jpeg" alt="product image preview" >
+          </div>
+          <div class="img__thumbnail">
+            <img src="/res/cartographer-front-detail.jpeg" alt="product image preview: front side of the box" data-selected="true">
+            <img src="/res/cartographer-insider-detail.jpeg" alt="product image preview: components/tools inside" data-selected="false">
+            <img src="/res/cartographer-back-detail.jpeg" alt="product image preview: back side of the box" data-selected="false">
+          </div>
+        </div>
+        <div class="product-information-container">
+          <div class="product__meta">
+            <h2 class="meta__name">CARTOGRAPHERS</h2>
+            <h2 class="meta__price">$22.00</h2>
+          </div>
+          <div class="product__description">
+            <h3 class="description__title">Description</h3>
+            <p class="description__content">In Cartographers: A Roll Player Tale, players compete to earn the most reputation stars by the time four seasons have passed. Each season, players draw on their map sheets and earn reputation by carrying out the queen's edicts before the season is over. The player with the most reputation stars at the end of winter wins!</p>
+          </div>
+          <div class="product__order-section">
+            <div class="order-section__quantity">
+              <button type="button" class="quantity__decrement-btn">-</button>
+              <p class="quantity__amount">1</p>
+              <button type="button" class="quantity__increment-btn">+</button>
+            </div>
+            <a href="shoppinp-cart.html" role="button" class="order-section__add-product-btn">Add to cart</a>
+          </div>
+        </div>
       </div>
-      <h2>Payment Details:</h2>
-      <form action="" method="POST">
-        <div class="payment__card-number">
-          <label for="card-number">Credit Card Number *</label>
-          <input type="text" id="card-number" name="card-number" autocomplete="nope" placeholder="0000000000000000" required="required" maxlength="16" pattern="[0-9]+">
+      <div class="product__additional-info">
+        <div class="additional-info__selection">
+          <h2 class="selection__content" data-selected="true" data-content="product-detail">PRODUCT DETAIL</h2>
+          <h2 class="selection__content" data-selected="false" data-content="delivery">DELIVERY</h2>
         </div>
-        <div class="payment__card-holder">
-          <label for="card-holder">Credit Card Holder Name *</label>
-          <input type="text" id="care-holder" name="card-holder" autocomplete="nope" required="required">
-        </div>
-        <div class="payment__card-meta">
-          <div class="card-meta__expiry">
-            <label for="card-expiry">Valid Thru *</label>
-            <input type="text" id="card-expiry" name="card-expiry" autocomplete="nope" placeholder="MM/YY" required="required" maxlength="5" pattern="[0-9]+">
+        <div class="additional-info__content">
+          <div class="content__text" data-display="true" data-content="product-detail">
+            <h3>Story:</h3>
+            <p>Queen Gimnax has ordered the reclamation of the northern lands. As a cartographer in her service, you are sent to map this territory, claiming it for the Kingdom of Nalos. Through official edicts, the queen announces which lands she prizes most, and you will increase your reputation by meeting her demands. But you are not alone in this wilderness. The Dragul contest your claims with their outposts, so you must draw your lines carefully to reduce their influence. Reclaim the greatest share of the queen's desired lands and you will be declared the greatest cartographer in the kingdom.</p>
+            <br>
+            <h3>Game Contents:</h3>
+            <p>1 Rulebook, 100 Map Sheets, 13 Explore Cards, 16 Scoring Cards, 4 Ambush Cards, 4 Season Cards, 4 Edict Cards, 4 Pencils.</p>
           </div>
-          <div class="card-meta__security-code">
-            <label for="security-code">CVV Code *</label>
-            <input type="text" id="security-code" name="security-code" autocomplete="nope" placeholder="000" required="required" maxlength="3" pattern="[0-9]+">
+          <div class="content__text" data-display="false" data-content="delivery">
+            <h3>Australia Delivery:</h3>
+            <p><em>We charge a flat rate of $5.90 AUD per shipment. Orders are shipped by air via Australia Post straight to your door!</em></p>
+            <br>
+            <h3>DeliveryTimes:</h3>
+            <p>The Board Gamer orders ship from our fulfillment partner Mighty Ape. Their warehouse is based in New Zealand with daily flights across the Tasman with Australia Post.</p>
+            <br>
+            <p>As a result of courier delays in Australia due to Covid-19, the current standard delivery times for In Stock products using Australia Post are as follows:</p>
+            <br>
+            <p>QLD 3-5 business days, 
+            NSW 3-6 business days,
+            ACT 4-6 business days,
+            VIC 5-9 business days,
+            SA 6-9 business days,
+            TAS, WA 7-9 business days,
+            NT 7-10 business days</p>
           </div>
         </div>
-        <a href="" role="button" class="payment__paypal-btn" aria-label="PayPal Alternative Payment Method">
-          <img src="res/paypal-icon.png" alt="PayPal">
-        </a>
-        <a href="payment-complete.html" role="button" class="payment__submit-btn">PROCEED & PLACE ORDER</a>
-      </form>
+      </div>
+      <div class="product__social-media">
+        <span>SHARE:</span>
+        <span class="social-media__link"><a href="" target="_blank"><i class="fab fa-instagram-square"></i></i></a></span>
+        <span class="social-media__link"><a href="" target="_blank"><i class="fab fa-facebook-square"></i></i></a></span>
+        <span class="social-media__link"><a href="" target="_blank"><i class="fab fa-twitter-square"></i></a></span>
+      </div>
     </section>
   </main>
   <footer>
@@ -181,9 +224,10 @@
     </div>
   </footer>
   <!-- scripts -->
-  <script src="javascript/nav-bar-control.js" defer></script>
-  <script src="javascript/footer-control.js" defer></script>
-  <script src="javascript/product-preview-selection.js" defer></script>
-  <script src="javascript/payment-validation.js"></script>
+  <script src="/javascript/nav-bar-control.js" defer></script>
+  <script src="/javascript/footer-control.js" defer></script>
+  <script src="/javascript/product-preview-selection.js" defer></script>
+  <script src="/javascript/product-content-selection.js" defer></script>
+  <script src="/javascript/product-quantity-control.js" defer></script>
 </body>
 </html>
